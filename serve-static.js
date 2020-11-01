@@ -46,7 +46,7 @@ app.use(
 )
 // app
 // app.listen(port, (_) => console.log('server opened on port ' + port))
-// 2. test avec HTTP/2. (PASSER EN HTTPS!)
+// 2. test avec HTTP/2.
 require('spdy') // HTTP/2*/
 	//require('https') // HTTPS 1.1
 	.createServer(
@@ -62,8 +62,8 @@ require('spdy') // HTTP/2*/
 	)
 	.listen(port, (_) => console.log('HTTPS server opened on port ' + port))
 
-// NodeJS le supporte maintenant nativement : https://nodejs.org/api/http2.html#http2_http2stream_pushstream_headers_options_callback
-// mais il n'assure pas la rétro-compatibilité, donc Express plante avec : https://github.com/expressjs/express/issues/3388
+// NodeJS supporte HTTP/2 maintenant nativement : https://nodejs.org/api/http2.html#http2_http2stream_pushstream_headers_options_callback
+// mais il n'assure pas la rétro-compatibilité, donc Express 4 plante avec : https://github.com/expressjs/express/issues/3388
 /*require('http2').createSecureServer({
     key: fs.readFileSync(path.join(__dirname, '/node_modules/http2/example/localhost.key')),
     cert: fs.readFileSync(path.join(__dirname, '/node_modules/http2/example/localhost.crt'))
