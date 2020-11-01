@@ -1,0 +1,16 @@
+CACHE MANIFEST
+
+# morback v1.1.1
+
+CACHE:
+morback-offline.html
+img/logo-firefox.png
+img/logo-chrome.png
+img/logo-explorer.png
+
+
+#NETWORK:
+#*
+
+FALLBACK:
+img/ img/placeholder.png

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css.css" />
+</head>
+<body>
+<h1 id="is-loaded">Veuillez patientez, nous allons répondre à votre appel&hellip;</h1>
+
+<script>
+
+$('#is-loaded').text(' jQuery est chargé ');
+
+</script>
+<p>Paragraphe de contenu</p>
+<script src="/delay/5/jquery.js"></script>
+
+<table>
+	<thead><tr>
+		<th scope="col">Avantages</th>
+		<th scope="col">Inconvénients</th>
+	</tr></thead>
+	<tbody><tr>
+			<td>Premier rendu rapide</td>
+			<td>FOUC (Flash Of Unscripted Content)</td>
+		</tr>
+		<tr>
+			<td>Simple</td>
+			<td>Dépendances inline à corriger</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Cas d'utilisation :</h2>
+<ul>
+	<li>Toute page dont le DOM est affiché rapidement</li>
+	<li>Pas d'utilisateur sur mobile</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		SetTimeout(0) technique demo
+	</title>
+	<script src="jquery-1.7.2.min.js"></script>
+	<script src="setImmediate.js"></script>
+	<style>
+		#animate-me {
+			width:50px;
+			height:50px;
+			position:absolute;
+			left:1%;
+			top:50%;
+		}
+		.animate {
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-duration: 1s;
+			animation-name: moveIt;
+			animation-timing-function: linear;
+		}
+		@keyframes moveIt {
+			from {
+				left: 1%;
+			}
+			to {
+				left: 90%;
+			}
+		}
+
+	</style>
+	<script>
+
+		// infinite animation
+		var fromLeftToRight = function() {
+			$('#animate-me').animate({left: "90%"}, {complete:fromRightToLeft, duration:1000});
+		};
+		var fromRightToLeft = function() {
+			$('#animate-me').animate({left: "1%"}, {complete:fromLeftToRight, duration: 1000});
+		};
+		function stopAnimation() {
+			$('#animate-me').stop()
+			document.getElementById('animate-me').classList.remove('animate')
+		}
+		function startCSSAnimation() {
+			document.getElementById('animate-me').classList.add('animate')
+		}
+
+		// the classical way
+		var hardCompute = function() {
+			// variables that affect the loop
+			var iterations = $('#iterations'),
+				now = + new Date();
+			// too long loop, harass the DOM
+			for(i = 0; i < 100000; i++) {
+				iterations.html(i+' iterations');
+			}
+			// code that depends on the end of the loop ( use of i )
+			iterations.html(i +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+		};
+
+		// the way you should do it (universal)
+		var deferWithNaiveSetTimeout = function() {
+			// variables that affect the loop
+			var iterations = $('#iterations-naive-settimeout'),
+				i = 0;
+
+			// create a function that will execute both the loop and the dependant code
+			(function mainLoop() { // TRICK 1 : create a new scope, give a name to
+				for(	// TRICK 3 : never reset i, it's already 0 outside of this scope
+					; i < 100000; i++) {
+					iterations.html(i+' iterations');
+					setTimeout(mainLoop, 0);
+					return i++; // TRICK 4 : stop the loop here
+				}
+				// TRICK 6 : if code depends on the loop, it has to be moved inside the new function
+				iterations.html(i +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+			}()); // TRICK 1 : scope created, auto-execute
+		};
+
+		// the way you should do it (universal)
+		var deferWithSetTimeout = function() {
+			// variables that affect the loop
+			var iterations = $('#iterations-settimeout'),
+				i = 0,
+				now = + new Date();
+
+			// create a function that will execute both the loop and the dependant code
+			(function mainLoop() { // TRICK 1 : create a new scope, give a name to this method
+				// time marker
+				var lastStart = + new Date(); // TRICK 2 : mark the start time, to know when to break. It could also depend on another metric (number of iterations perhaps), but time is best for user-perceived performance
+				// too long loop, harass the DOM
+				for(	// TRICK 3 : never reset i, it's already 0 outside of this scope
+					; i < 100000; i++) {
+					iterations.html(i+' iterations');
+					if( ((+ new Date()) - lastStart) > 16 ) // TRICK 4 : more than 50ms in this for() ? break that. Depending on your code, you could prefer other metrics like the number of iterations
+					{
+						setTimeout(mainLoop, 0); // TRICK 5 : setTimeout() will continue the loop once Javascript and the browser have free time
+						return; // TRICK 4 : stop the loop here
+					}
+				}
+				// TRICK 6 : if code depends on the loop, it has to be moved inside the new function
+				iterations.html(i +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+			}()); // TRICK 1 : scope created, auto-execute
+		};
+
+		// the ideal way (but works only on IE10+) https://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html
+		var deferWithSetImmediate = function() {
+			var iterations = $('#iterations-setimmediate'),
+				i = 0,
+				now = + new Date();
+
+			(function mainLoop() {
+				var lastStart = + new Date();
+				for(
+					; i < 100000; i++)
+					{
+					iterations.html(i+' iterations');
+
+					if( ((+ new Date()) - lastStart) > 10 ) {
+						setImmediate(mainLoop);
+						return;
+					}
+				}
+				iterations.html(i +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+			}());
+		};
+
+
+		// the "looks like made for it but no" way to do it ( IE10+, android 4.4+ and friends) http://caniuse.com/#feat=requestanimationframe
+		var deferWithRAF = function () {
+			if(!'requestAnimationFrame' in window)
+				return alert('requestAnimationFrame non supporté');
+
+			var iterations = $('#iterations-raf'),
+				i = 0,
+				now = + new Date();
+
+			(function mainLoop() {
+				// that's muuuuuuch more slower. Indeed requestAnimationFrame() is called every time the browser is ABOUT TO PAINT something. So dont use it for JS computation but rather for DOM mutation
+				if( i < 1000) {
+					iterations.html(i+' iterations');
+					requestAnimationFrame(mainLoop);
+					i++;
+				} else {
+					// code "métier" final
+					iterations.html(i +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+				}
+			}());
+		};
+
+		// the official way to do it ( IE10+, android 4.4+ and friends) http://caniuse.com/#feat=webworkers
+		var deferWithWorkers = function () {
+			if(!'Worker' in window)
+				return alert('Web Worker non supporté');
+			// TRICK 1 : the code is in another file
+			var worker = new Worker("worker.js");
+			// TRICK 2 : the other code does not have access to the main page
+			// so both scripts communicate by string messages
+			worker.onmessage = function( event ) {
+				$('#iterations-workers').html( event.data );
+			};
+
+			// just in case …
+			worker.onerror = function(error) {
+				dump("Worker error: " + error.message + "\n");
+				throw error;
+			};
+
+			// start the hard work in another thread (that does not have acces to the DOM)
+			worker.postMessage( 1000000 );
+		};
+
+
+
+		var deferWithSplitCompute = function () {
+			var iterations = $('#iterations-split'),
+			now = + new Date();
+
+			/*splitCompute( 100000, function fEach(i) {
+				iterations.html(i+' iterations');
+			}, function fCallback() {
+				iterations.html(100000 +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+			} );
+			*/
+			optimizedFor({
+				nbIterations:100000,
+				each: function fEach(i) {
+					iterations.html(i+' iterations');
+				},
+				end:function fCallback() {
+					iterations.html(100000 +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+				}
+			});
+		};
+
+
+/**
+* NEVER BLOCKING LOOP : implementation of the infamous setTimeout 0 hack, with time checking in order to guarantee fluidity without sacrificing execution speed.
+*
+* USAGE :
+*	var array = ["a way too big array that is heavy to process"]
+* optimizeFor({
+*		nbIterations: array.length,
+*		each:function( index ) {
+*			doSomethingUsefulWith( array[ index ] );
+*		},
+*		end: function() {
+*			console.log('ended processing array as fast as possible without blocking the browser');
+*		}
+*	);
+*
+* OPTIONS :
+*	@nbIterations	: number of loops to execute (or a function that returns true / false)
+*	@each : will be executed each time. iterationNumber will be given as an argument
+*	@end 	: will be called once loop ends
+*	@step	: max number of milliseconds a loop can block the browser. step up = loop runs faster, browser is less fluid. 0 = max fluidity, task last longer
+*
+*	DEPENDANCIES
+*	namespace: window by default, but you dont want globals right ?
+*	extend : jQuery OR underscorejs extend method
+* noop : empty function, you can use $.noop
+*/
+(function (namespace, extend, noop) {
+	namespace.optimizedFor = function(options) {
+		// for IE10, or if you include a decent setImmediate polyfill (say https://github.com/YuzuJS/setImmediate)
+		var setImmediate = window.setImmediate || function(callback) {
+				setTimeout(callback, 0);
+			},
+			// native or polyfill way to have a number of milliseconds
+			now = Date.now || function() {
+					return Number(new Date);
+				}
+		;
+
+		// replace ourselves
+		namespace.optimizedFor = function optimizedFor(options) {
+
+			options = extend({
+				nbIterations: 0,
+				each: noop,
+				end: noop, //
+				step: 12 //
+			}, options);
+
+			var i = 0,
+				check;
+			// allow the user to provide its own stop method
+			if (typeof options.nbIterations === 'function') {
+				check = options.nbIterations;
+			} else {
+				// by default, just check we can still
+				check = function(i) {
+					return i < options.nbIterations;
+				};
+			}
+
+			(function mainLoop() {
+				//
+				for (var lastStart = now(); check(i); i++) {
+					options.each(i);
+					//
+					if ((now() - lastStart) > 12) {
+						// let the browser breath
+						setImmediate(mainLoop);
+						// break the loop but do not forget to increment
+						i++;
+						return;
+					}
+				}
+				// final method (must be async too)
+				setImmediate(options.end);
+			}());
+		};
+
+		namespace.optimizedFor(options);
+	};
+
+}(window, $.extend, function(){}));
+
+	</script>
+</head>
+<body>
+	<div>
+		<button id="run-computation" onclick="hardCompute()">Regular blocking loop</button>
+		<span id="iterations">Iterations</span>
+	</div>
+
+	<div>
+		<button id="run-computation" onclick="deferWithNaiveSetTimeout()">Loop smoothed with naive setTimeout</button>
+		<span id="iterations-naive-settimeout">Iterations</span>
+	</div>
+
+
+	<div>
+		<button id="run-computation" onclick="deferWithSetTimeout()">Loop smoothed with setTimeout</button>
+		<span id="iterations-settimeout">Iterations</span>
+	</div>
+
+	<div>
+		<button id="run-computation" onclick="deferWithSetImmediate()">Loop smoothed with setImmediate</button>
+		<span id="iterations-setimmediate">Iterations</span>
+	</div>
+
+	<div>
+		<button id="run-computation" onclick="deferWithRAF()">Loop smoothed with requestAnimationFrame</button>
+		<span id="iterations-raf">Iterations</span>
+	</div>
+
+	<div>
+		<button id="run-computation" onclick="deferWithWorkers()">Loop smoothed by Web Workers</button>
+		<span id="iterations-workers">Iterations</span>
+	</div>
+
+	<div>
+		<button id="run-computation" onclick="deferWithSplitCompute()">Loop smoothed by Split compute</button>
+		<span id="iterations-split">Iterations</span>
+	</div>
+
+
+	<button id="run-animation" onclick="fromLeftToRight()">Animate jQuery</button>
+	<button id="stop-animation" onclick="stopAnimation()">STOP !</button>
+	<button id="run-animation-css" onclick="startCSSAnimation()">Animate with CSS</button>
+	<div id="animate-me">I will move</div>
+</body>
+</html>

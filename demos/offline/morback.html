@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<style>
+		table {
+			border: 1px solid black;
+			height: 90%;
+			left: 5%;
+			position: absolute;
+			top: 5%;
+			width: 90%;
+			font-size:4em;
+			text-align:center;
+		}
+		td {
+			border:1px solid;
+			width:33%;
+			height:33%;
+		}
+	</style>
+</head>
+<body>
+<table id="death-arena">
+	<tr>
+		<td id="cell-0-0">&nbsp;</td>
+		<td id="cell-0-1">&nbsp;</td>
+		<td id="cell-0-2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="cell-1-0">&nbsp;</td>
+		<td id="cell-1-1">&nbsp;</td>
+		<td id="cell-1-2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td id="cell-2-0">&nbsp;</td>
+		<td id="cell-2-1">&nbsp;</td>
+		<td id="cell-2-2">&nbsp;</td>
+	</tr>
+</table>
+<button id="reset" name="reset">Restart</button>
+<script>
+var aJetonsJoueurs = [
+		'&nbsp;', // rien
+		'X', // joueur 1
+		'O'], // joueur 2
+	aInitialPositions = [
+				[0, 0, 0],
+				[0, 0, 0],
+				[0, 0, 0]
+		],
+	aPositions = [
+			[0, 0, 0],
+			[0, 0, 0],
+			[0, 0, 0]
+		];
+
+var morback = {
+	// 1 ou 2
+	currentPlayer:1,
+	// affichage des positions (tableau de 3 tableau de 3 entrées : 0, 1 ou 2)
+	redraw:function( aPositions ) {
+		var line, cell;
+		for(var X = 0; X < aPositions.length; X++) {
+			for(var Y = 0; Y < aPositions[X].length; Y++) {
+				cell = document.getElementById('cell-'+X+'-'+Y);
+				cell.innerHTML = aJetonsJoueurs[ aPositions[ X ][ Y ] ];
+			}
+		}
+	},
+	positionSet:function(X, Y, value) {
+		if(!aPositions[ X ] || aPositions[ X ][ Y ] == undefined)
+			throw new TypeError('la cellule demandée n‘existe pas');
+		value = parseInt(value, 10);
+		if(value > 2 || value < 0 || value == NaN)
+			throw new TypeError('valeur : 0, 1 ou 2');
+		
+		aPositions[ X ][ Y ] = value;
+		
+		return true;
+	},
+	positionGet:function(X, Y) {
+		if(aPositions[ X ])
+			return aPositions[ X ][ Y ];
+	},
+	onArenaClick:function(e) {
+		if(e.target.nodeName !== 'TD')
+			return true;
+		if(morback.canPlay() === false)
+			return false;
+		// récupération des coordonnées dans la grille, par rapport à l'ID de l'élément cliqué
+		var matches = /cell-([0-2])-([0-2])/.exec(e.target.id.toString()),
+			X = matches[1],
+			Y = matches[2];
+	
+		// on vérifie que la case n'est pas déjà jouée
+		if(morback.positionGet(X, Y) > 0)
+			return false;
+		// on enregistre le coup dans la grille
+		morback.positionSet(X, Y, morback.currentPlayer);
+		
+		// on affiche le coup
+		morback.redraw(aPositions);
+		morback.nextPlayer();
+	},
+	// passe au joueur suivant
+	nextPlayer:function() {
+		if(morback.currentPlayer === 1)
+			morback.currentPlayer = 2;
+		else if(morback.currentPlayer === 2)
+			morback.currentPlayer = 1;
+		else
+			throw new Error('nextPlayer : rien compris');
+	},
+	// passe à false lorsque toutes les cases sont pleines
+	canPlay:function() {
+		for(var i = 0; i < aPositions.length; i++) {
+			line = aPositions[i];
+			for(var j = 0; j < line.length; j++) {
+				if(line[j] === 0)
+					return true;
+			}
+		}
+		// no empty cell found
+		return false;
+	}
+};
+
+document.getElementById('death-arena').addEventListener('click', morback.onArenaClick, true)
+document.getElementById('reset').addEventListener('click', function() {
+	console.log(aPositions, aInitialPositions);
+		aPositions = JSON.parse(JSON.stringify(aInitialPositions));
+		morback.redraw(aPositions);
+	}, true)
+
+
+morback.redraw(aPositions);
+
+</script>
+</body>
+</html>

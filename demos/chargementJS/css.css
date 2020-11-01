@@ -1,0 +1,18 @@
+
+table, td {
+    border:1px solid;
+}
+table {
+    position: absolute;
+    bottom: 1em;
+}
+h2 {
+    position: absolute;
+    left:50%;
+    bottom:2em;
+}
+ul {
+    position: absolute;
+    right: 1em;
+    bottom:1em;
+}

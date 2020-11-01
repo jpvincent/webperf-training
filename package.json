@@ -1,0 +1,23 @@
+{
+  "name": "webperf-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serve-static.js",
+  "scripts": {
+    "start": "nodemon serve-static.js"
+  },
+  "author": "Jean-Pierre Vincent",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "1.6.2",
+    "express": "^4.16.4",
+    "http2": "^3.3.7",
+    "nodemon": "^1.18.9",
+    "serve-favicon": "2.3.2",
+    "shrink-ray": "^0.1.3",
+    "spdy": "^4.0.0"
+  },
+  "nodemonConfig": {
+    "watch": "serve-static.js"
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css.css" />
+	<script>
+		window.loadJS = function(sUrl) {
+			var oNode = document.createElement('script');
+			oNode.type = 'text/javascript';
+			oNode.src = sUrl;
+			document.getElementsByTagName('head')[0].appendChild(oNode);
+		};
+		
+		// chargement non bloquant
+		loadJS( '/delay/5/jquery.js' );
+	</script>
+</head>
+<body>
+<h1 id="is-loaded">Veuillez patientez, nous allons répondre à votre appel&hellip;</h1>
+<script>
+// mais dépendance toujours cassée
+$('#is-loaded').text(' jQuery est chargé ');
+
+</script>
+<p>Paragraphe de contenu</p>
+
+<table>
+	<thead><tr>
+		<th scope="col">Avantages</th>
+		<th scope="col">Inconvénients</th>
+	</tr></thead>
+	<tbody><tr>
+			<td>Premier rendu rapide</td>
+			<td>FOUC (Flash Of Unscripted Content)</td>
+		</tr>
+		<tr>
+			<td>Téléchargement en parallèle</td>
+			<td>Ordre d'arrivée aléatoire</td>
+		</tr>
+		<tr>
+			<td>  </td>
+			<td>Dépendances inline à corriger</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Cas d'utilisation :</h2>
+<ul>
+	<li>Pages longues à afficher (calcul long, gros DOM)</li>
+	<li>Utilisateurs sur mobile</li>
+	<li>Pas de dépendances inline</li>
+</ul>
+
+</body>
+</html>
