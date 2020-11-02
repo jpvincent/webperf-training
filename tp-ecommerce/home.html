@@ -1,0 +1,3602 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="theme-color" content="#da2f0c" />
+		<link rel="canonical" href="https://debut-theme-lightroom.myshopify.com/" />
+		<title>Debut &ndash; debut-theme-lightroom</title>
+		<meta
+			name="description"
+			content="Debut is our signature theme, designed to beautifully showcase your brand and products."
+		/>
+		<!-- /snippets/social-meta-tags.liquid -->
+
+		<meta property="og:site_name" content="debut-theme-lightroom" />
+		<meta
+			property="og:url"
+			content="https://debut-theme-lightroom.myshopify.com/"
+		/>
+		<meta property="og:title" content="Debut" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:description"
+			content="Debut is our signature theme, designed to beautifully showcase your brand and products."
+		/>
+
+		<meta name="twitter:site" content="@shopify" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Debut" />
+		<meta
+			name="twitter:description"
+			content="Debut is our signature theme, designed to beautifully showcase your brand and products."
+		/>
+
+		<link
+			href="assets/theme.css"
+			rel="stylesheet"
+			type="text/css"
+			media="all"
+		/>
+
+		<script>
+			var theme = {
+				breakpoints: {
+					medium: 750,
+					large: 990,
+					widescreen: 1400,
+				},
+				strings: {
+					addToCart: 'Add to cart',
+					soldOut: 'Sold out',
+					unavailable: 'Unavailable',
+					regularPrice: 'Regular price',
+					salePrice: 'Sale price',
+					sale: 'Sale',
+					fromLowestPrice: 'from [price]',
+					vendor: 'Vendor',
+					showMore: 'Show More',
+					showLess: 'Show Less',
+					searchFor: 'Search for',
+					addressError: 'Error looking up that address',
+					addressNoResults: 'No results for that address',
+					addressQueryLimit:
+						'You have exceeded the Google API usage limit. Consider upgrading to a \u003ca href="https:\/\/developers.google.com\/maps\/premium\/usage-limits"\u003ePremium Plan\u003c\/a\u003e.',
+					authError:
+						'There was a problem authenticating your Google Maps account.',
+					newWindow: 'Opens in a new window.',
+					external: 'Opens external website.',
+					newWindowExternal: 'Opens external website in a new window.',
+					removeLabel: 'Remove [product]',
+					update: 'Update',
+					quantity: 'Quantity',
+					discountedTotal: 'Discounted total',
+					regularTotal: 'Regular total',
+					priceColumn: 'See Price column for discount details.',
+					quantityMinimumMessage: 'Quantity must be 1 or more',
+					cartError:
+						'There was an error while updating your cart. Please try again.',
+					removedItemMessage:
+						'Removed \u003cspan class="cart__removed-product-details"\u003e([quantity]) [link]\u003c\/span\u003e from your cart.',
+					unitPrice: 'Unit price',
+					unitPriceSeparator: 'per',
+					oneCartCount: '1 item',
+					otherCartCount: '[count] items',
+					quantityLabel: 'Quantity: [count]',
+					products: 'Products',
+					loading: 'Loading',
+					number_of_results: '[result_number] of [results_count]',
+					number_of_results_found: '[results_count] results found',
+					one_result_found: '1 result found',
+				},
+				moneyFormat: '${{amount}}',
+				moneyFormatWithCurrency: '${{amount}} CAD',
+				settings: {
+					predictiveSearchEnabled: true,
+					predictiveSearchShowPrice: false,
+					predictiveSearchShowVendor: true,
+				},
+			}
+
+			document.documentElement.className = document.documentElement.className.replace(
+				'no-js',
+				'js'
+			)
+		</script>
+		<script src="assets/lazysizes.js" async="async"></script>
+		<script src="assets/vendor.js" defer="defer"></script>
+		<script src="assets/theme.js" defer="defer"></script>
+
+		<script>
+			window.performance &&
+				window.performance.mark &&
+				window.performance.mark('shopify.content_for_header.start')
+		</script>
+		<meta
+			id="shopify-digital-wallet"
+			name="shopify-digital-wallet"
+			content="/19157383/digital_wallets/dialog"
+		/>
+		<link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch" />
+		<script id="shopify-features" type="application/json">
+			{
+				"accessToken": "0b1c05b61d238bfa2fdd6dee5d2c1fe9",
+				"betas": ["rich-media-storefront-analytics"],
+				"domain": "debut-theme-lightroom.myshopify.com",
+				"predictiveSearch": true,
+				"shopId": 19157383,
+				"smart_payment_buttons_url": "https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js",
+				"dynamic_checkout_cart_url": "https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js",
+				"locale": "en"
+			}
+		</script>
+		<script>
+			var Shopify = Shopify || {}
+			Shopify.shop = 'debut-theme-lightroom.myshopify.com'
+			Shopify.locale = 'en'
+			Shopify.currency = { active: 'CAD', rate: '1.0' }
+			Shopify.theme = {
+				name: 'Debut v. 15.0.0',
+				id: 77017481272,
+				theme_store_id: 796,
+				role: 'main',
+			}
+			Shopify.theme.handle = 'null'
+			Shopify.theme.style = { id: null, handle: null }
+			Shopify.cdnHost = window.location.host + '/tp/assets' // 'cdn.shopify.com'
+		</script>
+		<script type="module">
+			!(function (o) {
+				;(o.Shopify = o.Shopify || {}).modules = !0
+			})(window)
+		</script>
+		<script>
+			!(function (o) {
+				function n() {
+					var o = []
+					function n() {
+						o.push(Array.prototype.slice.apply(arguments))
+					}
+					return (n.q = o), n
+				}
+				var t = (o.Shopify = o.Shopify || {})
+				;(t.loadFeatures = n()), (t.autoloadFeatures = n())
+			})(window)
+		</script>
+		<script id="__st">
+			var __st = {
+				a: 19157383,
+				offset: -18000,
+				reqid: 'f637142c-d747-4082-9fc0-96556f79572b',
+				pageurl:
+					'debut-theme-lightroom.myshopify.com\/?_bt=eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWhrWldKMWRDMTBhR1Z0WlMxc2FXZG9kSEp2YjIwdWJYbHphRzl3YVdaNUxtTnZiUVk2QmtWVSIsImV4cCI6IjIwMjAtMTEtMDFUMTY6MTI6MzAuNTU1WiIsInB1ciI6InBlcm1hbmVudF9wYXNzd29yZF9ieXBhc3MifX0%3D--d464f87145b883ab40f33a947d723597708117f8',
+				u: '2a12f5e5fd0c',
+				p: 'home',
+			}
+		</script>
+		<script>
+			window.ShopifyPaypalV4VisibilityTracking = true
+		</script>
+		<script>
+			window.ShopifyAnalytics = window.ShopifyAnalytics || {}
+			window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {}
+			window.ShopifyAnalytics.meta.currency = 'CAD'
+			var meta = { page: { pageType: 'home' } }
+			for (var attr in meta) {
+				window.ShopifyAnalytics.meta[attr] = meta[attr]
+			}
+		</script>
+		<script>
+			window.ShopifyAnalytics.merchantGoogleAnalytics = function () {}
+		</script>
+		<script class="analytics">
+			;(function () {
+				var customDocumentWrite = function (content) {
+					var jquery = null
+
+					if (window.jQuery) {
+						jquery = window.jQuery
+					} else if (window.Checkout && window.Checkout.$) {
+						jquery = window.Checkout.$
+					}
+
+					if (jquery) {
+						jquery('body').append(content)
+					}
+				}
+
+				var hasLoggedConversion = function (token) {
+					if (
+						document.cookie.indexOf(
+							'loggedConversion=' + window.location.pathname
+						) !== -1
+					) {
+						return true
+					}
+					if (token) {
+						return document.cookie.indexOf('loggedConversion=' + token) !== -1
+					}
+					return false
+				}
+
+				var setCookieIfConversion = function (token) {
+					if (token) {
+						var twoMonthsFromNow = new Date(Date.now())
+						twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2)
+
+						document.cookie =
+							'loggedConversion=' + token + '; expires=' + twoMonthsFromNow
+					}
+				}
+
+				var trekkie = (window.ShopifyAnalytics.lib = window.trekkie =
+					window.trekkie || [])
+				if (trekkie.integrations) {
+					return
+				}
+				trekkie.methods = [
+					'identify',
+					'page',
+					'ready',
+					'track',
+					'trackForm',
+					'trackLink',
+				]
+				trekkie.factory = function (method) {
+					return function () {
+						var args = Array.prototype.slice.call(arguments)
+						args.unshift(method)
+						trekkie.push(args)
+						return trekkie
+					}
+				}
+				for (var i = 0; i < trekkie.methods.length; i++) {
+					var key = trekkie.methods[i]
+					trekkie[key] = trekkie.factory(key)
+				}
+				trekkie.load = function (config) {
+					trekkie.config = config
+					var script = document.createElement('script')
+					script.type = 'text/javascript'
+					script.onerror = function (e) {
+						var Monorail = {
+							produce: function produce(monorailDomain, schemaId, payload) {
+								var currentMs = new Date().getTime()
+								var event = {
+									schema_id: schemaId,
+									payload: payload,
+									metadata: {
+										event_created_at_ms: currentMs,
+										event_sent_at_ms: currentMs,
+									},
+								}
+								return Monorail.sendRequest(
+									'https://' + monorailDomain + '/v1/produce',
+									JSON.stringify(event)
+								)
+							},
+							sendRequest: function sendRequest(endpointUrl, payload) {
+								// Try the sendBeacon API
+								if (
+									window &&
+									window.navigator &&
+									typeof window.navigator.sendBeacon === 'function' &&
+									typeof window.Blob === 'function' &&
+									!Monorail.isIos12()
+								) {
+									var blobData = new window.Blob([payload], {
+										type: 'text/plain',
+									})
+
+									if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+										return true
+									} // sendBeacon was not successful
+								} // XHR beacon
+
+								var xhr = new XMLHttpRequest()
+
+								try {
+									xhr.open('POST', endpointUrl)
+									xhr.setRequestHeader('Content-Type', 'text/plain')
+									xhr.send(payload)
+								} catch (e) {
+									console.log(e)
+								}
+
+								return false
+							},
+							isIos12: function isIos12() {
+								return (
+									window.navigator.userAgent.lastIndexOf(
+										'iPhone; CPU iPhone OS 12_'
+									) !== -1 ||
+									window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !==
+										-1
+								)
+							},
+						}
+						Monorail.produce(
+							'monorail-edge.shopifysvc.com',
+							'trekkie_storefront_load_errors/1.0',
+							{
+								shop_id: 19157383,
+								theme_id: 77017481272,
+								app_name: 'storefront',
+							}
+						)
+					}
+					script.async = true
+					script.src = 'assets/tricorder.trekkie.storefront.js'
+					var first = document.getElementsByTagName('script')[0]
+					first.parentNode.insertBefore(script, first)
+				}
+				trekkie.load({
+					Trekkie: {
+						appName: 'storefront',
+						development: false,
+						defaultAttributes: {
+							shopId: 19157383,
+							isMerchantRequest: null,
+							themeId: 77017481272,
+							themeCityHash: '8868698216212399757',
+							contentLanguage: 'en',
+							currency: 'CAD',
+						},
+						isServerSideCookieWritingEnabled: true,
+						isPixelGateEnabled: true,
+					},
+					Performance: {
+						navigationTimingApiMeasurementsEnabled: true,
+						navigationTimingApiMeasurementsSampleRate: 1,
+					},
+					'Session Attribution': {},
+				})
+
+				var loaded = false
+				trekkie.ready(function () {
+					if (loaded) return
+					loaded = true
+
+					window.ShopifyAnalytics.lib = window.trekkie
+
+					var originalDocumentWrite = document.write
+					document.write = customDocumentWrite
+					try {
+						window.ShopifyAnalytics.merchantGoogleAnalytics.call(this)
+					} catch (error) {}
+					document.write = originalDocumentWrite
+					;(function () {
+						if (
+							window.BOOMR &&
+							(window.BOOMR.version || window.BOOMR.snippetExecuted)
+						) {
+							return
+						}
+						window.BOOMR = window.BOOMR || {}
+						window.BOOMR.snippetStart = new Date().getTime()
+						window.BOOMR.snippetExecuted = true
+						window.BOOMR.snippetVersion = 12
+						window.BOOMR.application = 'storefront-renderer'
+						window.BOOMR.themeName = 'Debut'
+						window.BOOMR.themeVersion = '15.0.0'
+						window.BOOMR.shopId = 19157383
+						window.BOOMR.themeId = 77017481272
+						window.BOOMR.url =
+							'https://cdn.shopify.com/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js'
+						var where =
+							document.currentScript ||
+							document.getElementsByTagName('script')[0]
+						var parentNode = where.parentNode
+						var promoted = false
+						var LOADER_TIMEOUT = 3000
+						function promote() {
+							if (promoted) {
+								return
+							}
+							var script = document.createElement('script')
+							script.id = 'boomr-scr-as'
+							script.src = window.BOOMR.url
+							script.async = true
+							parentNode.appendChild(script)
+							promoted = true
+						}
+						function iframeLoader(wasFallback) {
+							promoted = true
+							var dom, bootstrap, iframe, iframeStyle
+							var doc = document
+							var win = window
+							window.BOOMR.snippetMethod = wasFallback ? 'if' : 'i'
+							bootstrap = function (parent, scriptId) {
+								var script = doc.createElement('script')
+								script.id = scriptId || 'boomr-if-as'
+								script.src = window.BOOMR.url
+								BOOMR_lstart = new Date().getTime()
+								parent = parent || doc.body
+								parent.appendChild(script)
+							}
+							if (
+								!window.addEventListener &&
+								window.attachEvent &&
+								navigator.userAgent.match(/MSIE [67]./)
+							) {
+								window.BOOMR.snippetMethod = 's'
+								bootstrap(parentNode, 'boomr-async')
+								return
+							}
+							iframe = document.createElement('IFRAME')
+							iframe.src = 'about:blank'
+							iframe.title = ''
+							iframe.role = 'presentation'
+							iframe.loading = 'eager'
+							iframeStyle = (iframe.frameElement || iframe).style
+							iframeStyle.width = 0
+							iframeStyle.height = 0
+							iframeStyle.border = 0
+							iframeStyle.display = 'none'
+							parentNode.appendChild(iframe)
+							try {
+								win = iframe.contentWindow
+								doc = win.document.open()
+							} catch (e) {
+								dom = document.domain
+								iframe.src =
+									"javascript:var d=document.open();d.domain='" +
+									dom +
+									"';void(0);"
+								win = iframe.contentWindow
+								doc = win.document.open()
+							}
+							if (dom) {
+								doc._boomrl = function () {
+									this.domain = dom
+									bootstrap()
+								}
+								doc.write("<body onload='document._boomrl();'>")
+							} else {
+								win._boomrl = function () {
+									bootstrap()
+								}
+								if (win.addEventListener) {
+									win.addEventListener('load', win._boomrl, false)
+								} else if (win.attachEvent) {
+									win.attachEvent('onload', win._boomrl)
+								}
+							}
+							doc.close()
+						}
+						var link = document.createElement('link')
+						if (
+							link.relList &&
+							typeof link.relList.supports === 'function' &&
+							link.relList.supports('preload') &&
+							'as' in link
+						) {
+							window.BOOMR.snippetMethod = 'p'
+							link.href = window.BOOMR.url
+							link.rel = 'preload'
+							link.as = 'script'
+							link.addEventListener('load', promote)
+							link.addEventListener('error', function () {
+								iframeLoader(true)
+							})
+							setTimeout(function () {
+								if (!promoted) {
+									iframeLoader(true)
+								}
+							}, LOADER_TIMEOUT)
+							BOOMR_lstart = new Date().getTime()
+							parentNode.appendChild(link)
+						} else {
+							iframeLoader(false)
+						}
+						function boomerangSaveLoadTime(e) {
+							window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime()
+						}
+						if (window.addEventListener) {
+							window.addEventListener('load', boomerangSaveLoadTime, false)
+						} else if (window.attachEvent) {
+							window.attachEvent('onload', boomerangSaveLoadTime)
+						}
+						if (document.addEventListener) {
+							document.addEventListener('onBoomerangLoaded', function (e) {
+								e.detail.BOOMR.init({
+									producer_url:
+										'https://monorail-edge.shopifysvc.com/v1/produce',
+									ResourceTiming: {
+										enabled: true,
+										trackedResourceTypes: ['script', 'img', 'css'],
+									},
+								})
+								e.detail.BOOMR.t_end = new Date().getTime()
+							})
+						} else if (document.attachEvent) {
+							document.attachEvent('onpropertychange', function (e) {
+								if (!e) e = event
+								if (e.propertyName === 'onBoomerangLoaded') {
+									e.detail.BOOMR.init({
+										producer_url:
+											'https://monorail-edge.shopifysvc.com/v1/produce',
+										ResourceTiming: {
+											enabled: true,
+											trackedResourceTypes: ['script', 'img', 'css'],
+										},
+									})
+									e.detail.BOOMR.t_end = new Date().getTime()
+								}
+							})
+						}
+					})()
+
+					window.ShopifyAnalytics.lib.page(null, { pageType: 'home' })
+
+					var match = window.location.pathname.match(
+						/checkouts\/(.+)\/(thank_you|post_purchase)/
+					)
+					var token = match ? match[1] : undefined
+					if (!hasLoggedConversion(token)) {
+						setCookieIfConversion(token)
+					}
+				})
+
+				var eventsListenerScript = document.createElement('script')
+				eventsListenerScript.async = true
+				eventsListenerScript.src =
+					'//cdn.shopify.com/shopifycloud/shopify/assets/shop_events_listener-68ba3f1321f00bf07cb78a03841621079812265e950cdccade3463749ea2705e.js'
+				document
+					.getElementsByTagName('head')[0]
+					.appendChild(eventsListenerScript)
+			})()
+		</script>
+		<script>
+			!(function (e) {
+				e.addEventListener('DOMContentLoaded', function () {
+					var t
+					null !==
+						e.querySelector(
+							'form[action^="/contact"] input[name="form_type"][value="contact"]'
+						) &&
+						((window.Shopify = window.Shopify || {}),
+						(window.Shopify.recaptchaV3 = window.Shopify.recaptchaV3 || {
+							siteKey: '6LcCR2cUAAAAANS1Gpq_mDIJ2pQuJphsSQaUEuc9',
+						}),
+						(t = e.createElement('script')).setAttribute(
+							'src',
+							'https://cdn.shopify.com/shopifycloud/storefront-recaptcha-v3/v0.1/index.js'
+						),
+						e.body.appendChild(t))
+				})
+			})(document)
+		</script>
+		<script
+			data-source-attribution="shopify.loadfeatures"
+			defer="defer"
+			src="assets/load_feature.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			data-source-attribution="shopify.dynamic-checkout"
+			defer="defer"
+			src="assets/features.js"
+			crossorigin="anonymous"
+		></script>
+
+		<script>
+			window.performance &&
+				window.performance.mark &&
+				window.performance.mark('shopify.content_for_header.end')
+		</script>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="628" />
+	</head>
+
+	<body class="template-index">
+		<a class="in-page-link visually-hidden skip-link" href="#MainContent"
+			>Skip to content</a
+		><style data-shopify>
+			.cart-popup {
+				box-shadow: 1px 1px 10px 2px rgba(228, 228, 228, 0.5);
+			}
+		</style>
+		<div
+			class="cart-popup-wrapper cart-popup-wrapper--hidden"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="CartPopupHeading"
+			data-cart-popup-wrapper
+		>
+			<div class="cart-popup" data-cart-popup tabindex="-1">
+				<div class="cart-popup__header">
+					<h2 id="CartPopupHeading" class="cart-popup__heading">
+						Just added to your cart
+					</h2>
+					<button
+						class="cart-popup__close"
+						aria-label="Close"
+						data-cart-popup-close
+					>
+						<svg
+							aria-hidden="true"
+							focusable="false"
+							role="presentation"
+							class="icon icon-close"
+							viewBox="0 0 40 40"
+						>
+							<path
+								d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"
+								class="layer"
+							/>
+						</svg>
+					</button>
+				</div>
+				<div class="cart-popup-item">
+					<div
+						class="cart-popup-item__image-wrapper hide"
+						data-cart-popup-image-wrapper
+					>
+						<div
+							class="cart-popup-item__image cart-popup-item__image--placeholder"
+							data-cart-popup-image-placeholder
+						>
+							<div data-placeholder-size></div>
+							<div
+								class="placeholder-background placeholder-background--animation"
+							></div>
+						</div>
+					</div>
+					<div class="cart-popup-item__description">
+						<div>
+							<div class="cart-popup-item__title" data-cart-popup-title></div>
+							<ul
+								class="product-details"
+								aria-label="Product details"
+								data-cart-popup-product-details
+							></ul>
+						</div>
+						<div class="cart-popup-item__quantity">
+							<span
+								class="visually-hidden"
+								data-cart-popup-quantity-label
+							></span>
+							<span aria-hidden="true">Qty:</span>
+							<span aria-hidden="true" data-cart-popup-quantity></span>
+						</div>
+					</div>
+				</div>
+
+				<a href="/cart" class="cart-popup__cta-link btn btn--secondary-accent">
+					View cart (<span data-cart-popup-cart-quantity></span>)
+				</a>
+
+				<div class="cart-popup__dismiss">
+					<button
+						class="cart-popup__dismiss-button text-link text-link--accent"
+						data-cart-popup-dismiss
+					>
+						Continue shopping
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="shopify-section-header" class="shopify-section">
+			<style>
+				.site-header__logo-image {
+					max-width: 135px;
+				}
+
+				.site-header__logo-image {
+					margin: 0;
+				}
+			</style>
+
+			<div
+				id="SearchDrawer"
+				class="search-bar drawer drawer--top"
+				role="dialog"
+				aria-modal="true"
+				aria-label="Search"
+				data-predictive-search-drawer
+			>
+				<div class="search-bar__interior">
+					<div class="search-form__container" data-search-form-container>
+						<form
+							class="search-form search-bar__form"
+							action="/search"
+							method="get"
+							role="search"
+						>
+							<div class="search-form__input-wrapper">
+								<input
+									type="text"
+									name="q"
+									placeholder="Search"
+									role="combobox"
+									aria-autocomplete="list"
+									aria-owns="predictive-search-results"
+									aria-expanded="false"
+									aria-label="Search"
+									aria-haspopup="listbox"
+									class="search-form__input search-bar__input"
+									data-predictive-search-drawer-input
+								/>
+								<input
+									type="hidden"
+									name="options[prefix]"
+									value="last"
+									aria-hidden="true"
+								/>
+								<div
+									class="predictive-search-wrapper predictive-search-wrapper--drawer"
+									data-predictive-search-mount="drawer"
+								></div>
+							</div>
+
+							<button
+								class="search-bar__submit search-form__submit"
+								type="submit"
+								data-search-form-submit
+							>
+								<svg
+									aria-hidden="true"
+									focusable="false"
+									role="presentation"
+									class="icon icon-search"
+									viewBox="0 0 37 40"
+								>
+									<path
+										d="M35.6 36l-9.8-9.8c4.1-5.4 3.6-13.2-1.3-18.1-5.4-5.4-14.2-5.4-19.7 0-5.4 5.4-5.4 14.2 0 19.7 2.6 2.6 6.1 4.1 9.8 4.1 3 0 5.9-1 8.3-2.8l9.8 9.8c.4.4.9.6 1.4.6s1-.2 1.4-.6c.9-.9.9-2.1.1-2.9zm-20.9-8.2c-2.6 0-5.1-1-7-2.9-3.9-3.9-3.9-10.1 0-14C9.6 9 12.2 8 14.7 8s5.1 1 7 2.9c3.9 3.9 3.9 10.1 0 14-1.9 1.9-4.4 2.9-7 2.9z"
+									/>
+								</svg>
+								<span class="icon__fallback-text">Submit</span>
+							</button>
+						</form>
+
+						<div class="search-bar__actions">
+							<button
+								type="button"
+								class="btn--link search-bar__close js-drawer-close"
+							>
+								<svg
+									aria-hidden="true"
+									focusable="false"
+									role="presentation"
+									class="icon icon-close"
+									viewBox="0 0 40 40"
+								>
+									<path
+										d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"
+										class="layer"
+									/>
+								</svg>
+								<span class="icon__fallback-text">Close search</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div
+				data-section-id="header"
+				data-section-type="header-section"
+				data-header-section
+			>
+				<style>
+					.announcement-bar {
+						background-color: #162950;
+					}
+
+					.announcement-bar--link:hover {
+						background-color: #254586;
+					}
+
+					.announcement-bar__message {
+						color: #ffffff;
+					}
+				</style>
+
+				<div class="announcement-bar">
+					<p class="announcement-bar__message">Free shipping, at any time.</p>
+				</div>
+
+				<header class="site-header border-bottom logo--left" role="banner">
+					<div
+						class="grid grid--no-gutters grid--table site-header__mobile-nav"
+					>
+						<div class="grid__item medium-up--one-quarter logo-align--left">
+							<h1 class="h2 site-header__logo">
+								<a href="/" class="site-header__logo-image">
+									<img
+										class="lazyload js"
+										src="assets/img/Lightroom-logo_300x300.png"
+										data-src="assets/img/Lightroom-logo_{width}x.png"
+										data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+										data-aspectratio="7.249557522123894"
+										data-sizes="auto"
+										alt="debut-theme-lightroom"
+										style="max-width: 135px"
+									/>
+									<noscript>
+										<img
+											src="assets/img/Lightroom-logo_135x.png"
+											srcset="
+												assets/img/Lightroom-logo_135x.png    1x,
+												assets/img/Lightroom-logo_135x@2x.png 2x
+											"
+											alt="debut-theme-lightroom"
+											style="max-width: 135px"
+										/>
+									</noscript>
+								</a>
+							</h1>
+						</div>
+
+						<nav
+							class="grid__item medium-up--one-half small--hide"
+							id="AccessibleNav"
+							role="navigation"
+						>
+							<ul class="site-nav list--inline" id="SiteNav">
+								<li class="site-nav--active">
+									<a
+										href="/"
+										class="site-nav__link site-nav__link--main site-nav__link--active"
+										aria-current="page"
+									>
+										<span class="site-nav__label">Home</span>
+									</a>
+								</li>
+
+								<li>
+									<a
+										href="/pages/about-us"
+										class="site-nav__link site-nav__link--main"
+									>
+										<span class="site-nav__label">About Us</span>
+									</a>
+								</li>
+
+								<li
+									class="site-nav--has-dropdown site-nav--has-centered-dropdown"
+									data-has-dropdowns
+								>
+									<button
+										class="site-nav__link site-nav__link--main site-nav__link--button"
+										type="button"
+										aria-expanded="false"
+										aria-controls="SiteNavLabel-furniture"
+									>
+										<span class="site-nav__label">Furniture</span
+										><svg
+											aria-hidden="true"
+											focusable="false"
+											role="presentation"
+											class="icon icon-chevron-down"
+											viewBox="0 0 9 9"
+										>
+											<path
+												d="M8.542 2.558a.625.625 0 0 1 0 .884l-3.6 3.6a.626.626 0 0 1-.884 0l-3.6-3.6a.625.625 0 1 1 .884-.884L4.5 5.716l3.158-3.158a.625.625 0 0 1 .884 0z"
+												fill="#fff"
+											/>
+										</svg>
+									</button>
+
+									<div
+										class="site-nav__dropdown site-nav__dropdown--centered"
+										id="SiteNavLabel-furniture"
+									>
+										<div class="site-nav__childlist">
+											<ul class="site-nav__childlist-grid">
+												<li class="site-nav__childlist-item">
+													<a
+														href="/collections/chairs"
+														class="site-nav__link site-nav__child-link site-nav__child-link--parent"
+													>
+														<span class="site-nav__label">Chairs</span>
+													</a>
+
+													<ul>
+														<li>
+															<a
+																href="/collections/staffan-holm"
+																class="site-nav__link site-nav__child-link"
+															>
+																<span class="site-nav__label"
+																	>Staffan Holm</span
+																>
+															</a>
+														</li>
+
+														<li>
+															<a
+																href="/collections/lars-beller-fjetland"
+																class="site-nav__link site-nav__child-link"
+															>
+																<span class="site-nav__label"
+																	>Lars Beller Fjetland</span
+																>
+															</a>
+														</li>
+
+														<li>
+															<a
+																href="/collections/rudolph-schelling-webermann"
+																class="site-nav__link site-nav__child-link"
+															>
+																<span class="site-nav__label"
+																	>Rudolph Schelling Webermann</span
+																>
+															</a>
+														</li>
+													</ul>
+												</li>
+
+												<li class="site-nav__childlist-item">
+													<a
+														href="/collections/sofas"
+														class="site-nav__link site-nav__child-link site-nav__child-link--parent"
+													>
+														<span class="site-nav__label">Sofas</span>
+													</a>
+
+													<ul>
+														<li>
+															<a
+																href="/collections/hem-design-studio"
+																class="site-nav__link site-nav__child-link"
+															>
+																<span class="site-nav__label"
+																	>HEM Design Studio</span
+																>
+															</a>
+														</li>
+													</ul>
+												</li>
+
+												<li class="site-nav__childlist-item">
+													<a
+														href="/collections/tables"
+														class="site-nav__link site-nav__child-link site-nav__child-link--parent"
+													>
+														<span class="site-nav__label">Tables</span>
+													</a>
+
+													<ul>
+														<li>
+															<a
+																href="/collections/staffan-holm-tables"
+																class="site-nav__link site-nav__child-link"
+															>
+																<span class="site-nav__label"
+																	>Staffan Holm</span
+																>
+															</a>
+														</li>
+
+														<li>
+															<a
+																href="/collections/karoline-fesser"
+																class="site-nav__link site-nav__child-link"
+															>
+																<span class="site-nav__label"
+																	>Karoline Fesser</span
+																>
+															</a>
+														</li>
+
+														<li>
+															<a
+																href="/collections/gamfratesi"
+																class="site-nav__link site-nav__child-link"
+															>
+																<span class="site-nav__label">GamFratesi</span>
+															</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li>
+									<a
+										href="/blogs/stories"
+										class="site-nav__link site-nav__link--main"
+									>
+										<span class="site-nav__label">Blog</span>
+									</a>
+								</li>
+
+								<li>
+									<a
+										href="/pages/contact-us"
+										class="site-nav__link site-nav__link--main"
+									>
+										<span class="site-nav__label">Contact Us</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div
+							class="grid__item medium-up--one-quarter text-right site-header__icons site-header__icons--plus"
+						>
+							<div class="site-header__icons-wrapper">
+								<button
+									type="button"
+									class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top"
+								>
+									<svg
+										aria-hidden="true"
+										focusable="false"
+										role="presentation"
+										class="icon icon-search"
+										viewBox="0 0 37 40"
+									>
+										<path
+											d="M35.6 36l-9.8-9.8c4.1-5.4 3.6-13.2-1.3-18.1-5.4-5.4-14.2-5.4-19.7 0-5.4 5.4-5.4 14.2 0 19.7 2.6 2.6 6.1 4.1 9.8 4.1 3 0 5.9-1 8.3-2.8l9.8 9.8c.4.4.9.6 1.4.6s1-.2 1.4-.6c.9-.9.9-2.1.1-2.9zm-20.9-8.2c-2.6 0-5.1-1-7-2.9-3.9-3.9-3.9-10.1 0-14C9.6 9 12.2 8 14.7 8s5.1 1 7 2.9c3.9 3.9 3.9 10.1 0 14-1.9 1.9-4.4 2.9-7 2.9z"
+										/>
+									</svg>
+									<span class="icon__fallback-text">Search</span>
+								</button>
+
+								<a
+									href="/account/login"
+									class="site-header__icon site-header__account"
+								>
+									<svg
+										aria-hidden="true"
+										focusable="false"
+										role="presentation"
+										class="icon icon-login"
+										viewBox="0 0 28.33 37.68"
+									>
+										<path
+											d="M14.17 14.9a7.45 7.45 0 1 0-7.5-7.45 7.46 7.46 0 0 0 7.5 7.45zm0-10.91a3.45 3.45 0 1 1-3.5 3.46A3.46 3.46 0 0 1 14.17 4zM14.17 16.47A14.18 14.18 0 0 0 0 30.68c0 1.41.66 4 5.11 5.66a27.17 27.17 0 0 0 9.06 1.34c6.54 0 14.17-1.84 14.17-7a14.18 14.18 0 0 0-14.17-14.21zm0 17.21c-6.3 0-10.17-1.77-10.17-3a10.17 10.17 0 1 1 20.33 0c.01 1.23-3.86 3-10.16 3z"
+										/>
+									</svg>
+									<span class="icon__fallback-text">Log in</span>
+								</a>
+
+								<a href="/cart" class="site-header__icon site-header__cart">
+									<svg
+										aria-hidden="true"
+										focusable="false"
+										role="presentation"
+										class="icon icon-cart"
+										viewBox="0 0 37 40"
+									>
+										<path
+											d="M36.5 34.8L33.3 8h-5.9C26.7 3.9 23 .8 18.5.8S10.3 3.9 9.6 8H3.7L.5 34.8c-.2 1.5.4 2.4.9 3 .5.5 1.4 1.2 3.1 1.2h28c1.3 0 2.4-.4 3.1-1.3.7-.7 1-1.8.9-2.9zm-18-30c2.2 0 4.1 1.4 4.7 3.2h-9.5c.7-1.9 2.6-3.2 4.8-3.2zM4.5 35l2.8-23h2.2v3c0 1.1.9 2 2 2s2-.9 2-2v-3h10v3c0 1.1.9 2 2 2s2-.9 2-2v-3h2.2l2.8 23h-28z"
+										/>
+									</svg>
+									<span class="icon__fallback-text">Cart</span>
+									<div
+										id="CartCount"
+										class="site-header__cart-count hide"
+										data-cart-count-bubble
+									>
+										<span data-cart-count>0</span>
+										<span class="icon__fallback-text medium-up--hide"
+											>items</span
+										>
+									</div>
+								</a>
+
+								<button
+									type="button"
+									class="btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open"
+									aria-controls="MobileNav"
+									aria-expanded="false"
+									aria-label="Menu"
+								>
+									<svg
+										aria-hidden="true"
+										focusable="false"
+										role="presentation"
+										class="icon icon-hamburger"
+										viewBox="0 0 37 40"
+									>
+										<path
+											d="M33.5 25h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0-11.5h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0 23h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2z"
+										/>
+									</svg>
+									<svg
+										aria-hidden="true"
+										focusable="false"
+										role="presentation"
+										class="icon icon-close"
+										viewBox="0 0 40 40"
+									>
+										<path
+											d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"
+											class="layer"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<nav class="mobile-nav-wrapper medium-up--hide" role="navigation">
+						<ul id="MobileNav" class="mobile-nav">
+							<li class="mobile-nav__item border-bottom">
+								<a
+									href="/"
+									class="mobile-nav__link mobile-nav__link--active"
+									aria-current="page"
+								>
+									<span class="mobile-nav__label">Home</span>
+								</a>
+							</li>
+
+							<li class="mobile-nav__item border-bottom">
+								<a href="/pages/about-us" class="mobile-nav__link">
+									<span class="mobile-nav__label">About Us</span>
+								</a>
+							</li>
+
+							<li class="mobile-nav__item border-bottom">
+								<button
+									type="button"
+									class="btn--link js-toggle-submenu mobile-nav__link"
+									data-target="furniture-3"
+									data-level="1"
+									aria-expanded="false"
+								>
+									<span class="mobile-nav__label">Furniture</span>
+									<div class="mobile-nav__icon">
+										<svg
+											aria-hidden="true"
+											focusable="false"
+											role="presentation"
+											class="icon icon-chevron-right"
+											viewBox="0 0 14 14"
+										>
+											<path
+												d="M3.871.604c.44-.439 1.152-.439 1.591 0l5.515 5.515s-.049-.049.003.004l.082.08c.439.44.44 1.153 0 1.592l-5.6 5.6a1.125 1.125 0 0 1-1.59-1.59L8.675 7 3.87 2.195a1.125 1.125 0 0 1 0-1.59z"
+												fill="#fff"
+											/>
+										</svg>
+									</div>
+								</button>
+								<ul
+									class="mobile-nav__dropdown"
+									data-parent="furniture-3"
+									data-level="2"
+								>
+									<li class="visually-hidden" tabindex="-1" data-menu-title="2">
+										Furniture Menu
+									</li>
+									<li class="mobile-nav__item border-bottom">
+										<div class="mobile-nav__table">
+											<div class="mobile-nav__table-cell mobile-nav__return">
+												<button
+													class="btn--link js-toggle-submenu mobile-nav__return-btn"
+													type="button"
+													aria-expanded="true"
+													aria-label="Furniture"
+												>
+													<svg
+														aria-hidden="true"
+														focusable="false"
+														role="presentation"
+														class="icon icon-chevron-left"
+														viewBox="0 0 14 14"
+													>
+														<path
+															d="M10.129.604a1.125 1.125 0 0 0-1.591 0L3.023 6.12s.049-.049-.003.004l-.082.08c-.439.44-.44 1.153 0 1.592l5.6 5.6a1.125 1.125 0 0 0 1.59-1.59L5.325 7l4.805-4.805c.44-.439.44-1.151 0-1.59z"
+															fill="#fff"
+														/>
+													</svg>
+												</button>
+											</div>
+											<span
+												class="mobile-nav__sublist-link mobile-nav__sublist-header mobile-nav__sublist-header--main-nav-parent"
+											>
+												<span class="mobile-nav__label">Furniture</span>
+											</span>
+										</div>
+									</li>
+
+									<li class="mobile-nav__item border-bottom">
+										<button
+											type="button"
+											class="btn--link js-toggle-submenu mobile-nav__link mobile-nav__sublist-link"
+											data-target="chairs-3-1"
+											aria-expanded="false"
+										>
+											<span class="mobile-nav__label">Chairs</span>
+											<div class="mobile-nav__icon">
+												<svg
+													aria-hidden="true"
+													focusable="false"
+													role="presentation"
+													class="icon icon-chevron-right"
+													viewBox="0 0 14 14"
+												>
+													<path
+														d="M3.871.604c.44-.439 1.152-.439 1.591 0l5.515 5.515s-.049-.049.003.004l.082.08c.439.44.44 1.153 0 1.592l-5.6 5.6a1.125 1.125 0 0 1-1.59-1.59L8.675 7 3.87 2.195a1.125 1.125 0 0 1 0-1.59z"
+														fill="#fff"
+													/>
+												</svg>
+											</div>
+										</button>
+										<ul
+											class="mobile-nav__dropdown"
+											data-parent="chairs-3-1"
+											data-level="3"
+										>
+											<li
+												class="visually-hidden"
+												tabindex="-1"
+												data-menu-title="3"
+											>
+												Chairs Menu
+											</li>
+											<li class="mobile-nav__item border-bottom">
+												<div class="mobile-nav__table">
+													<div
+														class="mobile-nav__table-cell mobile-nav__return"
+													>
+														<button
+															type="button"
+															class="btn--link js-toggle-submenu mobile-nav__return-btn"
+															data-target="furniture-3"
+															aria-expanded="true"
+															aria-label="Chairs"
+														>
+															<svg
+																aria-hidden="true"
+																focusable="false"
+																role="presentation"
+																class="icon icon-chevron-left"
+																viewBox="0 0 14 14"
+															>
+																<path
+																	d="M10.129.604a1.125 1.125 0 0 0-1.591 0L3.023 6.12s.049-.049-.003.004l-.082.08c-.439.44-.44 1.153 0 1.592l5.6 5.6a1.125 1.125 0 0 0 1.59-1.59L5.325 7l4.805-4.805c.44-.439.44-1.151 0-1.59z"
+																	fill="#fff"
+																/>
+															</svg>
+														</button>
+													</div>
+													<a
+														href="/collections/chairs"
+														class="mobile-nav__sublist-link mobile-nav__sublist-header"
+													>
+														<span class="mobile-nav__label">Chairs</span>
+													</a>
+												</div>
+											</li>
+
+											<li class="mobile-nav__item border-bottom">
+												<a
+													href="/collections/staffan-holm"
+													class="mobile-nav__sublist-link"
+												>
+													<span class="mobile-nav__label">Staffan Holm</span>
+												</a>
+											</li>
+
+											<li class="mobile-nav__item border-bottom">
+												<a
+													href="/collections/lars-beller-fjetland"
+													class="mobile-nav__sublist-link"
+												>
+													<span class="mobile-nav__label"
+														>Lars Beller Fjetland</span
+													>
+												</a>
+											</li>
+
+											<li class="mobile-nav__item">
+												<a
+													href="/collections/rudolph-schelling-webermann"
+													class="mobile-nav__sublist-link"
+												>
+													<span class="mobile-nav__label"
+														>Rudolph Schelling Webermann</span
+													>
+												</a>
+											</li>
+										</ul>
+									</li>
+
+									<li class="mobile-nav__item border-bottom">
+										<button
+											type="button"
+											class="btn--link js-toggle-submenu mobile-nav__link mobile-nav__sublist-link"
+											data-target="sofas-3-2"
+											aria-expanded="false"
+										>
+											<span class="mobile-nav__label">Sofas</span>
+											<div class="mobile-nav__icon">
+												<svg
+													aria-hidden="true"
+													focusable="false"
+													role="presentation"
+													class="icon icon-chevron-right"
+													viewBox="0 0 14 14"
+												>
+													<path
+														d="M3.871.604c.44-.439 1.152-.439 1.591 0l5.515 5.515s-.049-.049.003.004l.082.08c.439.44.44 1.153 0 1.592l-5.6 5.6a1.125 1.125 0 0 1-1.59-1.59L8.675 7 3.87 2.195a1.125 1.125 0 0 1 0-1.59z"
+														fill="#fff"
+													/>
+												</svg>
+											</div>
+										</button>
+										<ul
+											class="mobile-nav__dropdown"
+											data-parent="sofas-3-2"
+											data-level="3"
+										>
+											<li
+												class="visually-hidden"
+												tabindex="-1"
+												data-menu-title="3"
+											>
+												Sofas Menu
+											</li>
+											<li class="mobile-nav__item border-bottom">
+												<div class="mobile-nav__table">
+													<div
+														class="mobile-nav__table-cell mobile-nav__return"
+													>
+														<button
+															type="button"
+															class="btn--link js-toggle-submenu mobile-nav__return-btn"
+															data-target="furniture-3"
+															aria-expanded="true"
+															aria-label="Sofas"
+														>
+															<svg
+																aria-hidden="true"
+																focusable="false"
+																role="presentation"
+																class="icon icon-chevron-left"
+																viewBox="0 0 14 14"
+															>
+																<path
+																	d="M10.129.604a1.125 1.125 0 0 0-1.591 0L3.023 6.12s.049-.049-.003.004l-.082.08c-.439.44-.44 1.153 0 1.592l5.6 5.6a1.125 1.125 0 0 0 1.59-1.59L5.325 7l4.805-4.805c.44-.439.44-1.151 0-1.59z"
+																	fill="#fff"
+																/>
+															</svg>
+														</button>
+													</div>
+													<a
+														href="/collections/sofas"
+														class="mobile-nav__sublist-link mobile-nav__sublist-header"
+													>
+														<span class="mobile-nav__label">Sofas</span>
+													</a>
+												</div>
+											</li>
+
+											<li class="mobile-nav__item">
+												<a
+													href="/collections/hem-design-studio"
+													class="mobile-nav__sublist-link"
+												>
+													<span class="mobile-nav__label"
+														>HEM Design Studio</span
+													>
+												</a>
+											</li>
+										</ul>
+									</li>
+
+									<li class="mobile-nav__item">
+										<button
+											type="button"
+											class="btn--link js-toggle-submenu mobile-nav__link mobile-nav__sublist-link"
+											data-target="tables-3-3"
+											aria-expanded="false"
+										>
+											<span class="mobile-nav__label">Tables</span>
+											<div class="mobile-nav__icon">
+												<svg
+													aria-hidden="true"
+													focusable="false"
+													role="presentation"
+													class="icon icon-chevron-right"
+													viewBox="0 0 14 14"
+												>
+													<path
+														d="M3.871.604c.44-.439 1.152-.439 1.591 0l5.515 5.515s-.049-.049.003.004l.082.08c.439.44.44 1.153 0 1.592l-5.6 5.6a1.125 1.125 0 0 1-1.59-1.59L8.675 7 3.87 2.195a1.125 1.125 0 0 1 0-1.59z"
+														fill="#fff"
+													/>
+												</svg>
+											</div>
+										</button>
+										<ul
+											class="mobile-nav__dropdown"
+											data-parent="tables-3-3"
+											data-level="3"
+										>
+											<li
+												class="visually-hidden"
+												tabindex="-1"
+												data-menu-title="3"
+											>
+												Tables Menu
+											</li>
+											<li class="mobile-nav__item border-bottom">
+												<div class="mobile-nav__table">
+													<div
+														class="mobile-nav__table-cell mobile-nav__return"
+													>
+														<button
+															type="button"
+															class="btn--link js-toggle-submenu mobile-nav__return-btn"
+															data-target="furniture-3"
+															aria-expanded="true"
+															aria-label="Tables"
+														>
+															<svg
+																aria-hidden="true"
+																focusable="false"
+																role="presentation"
+																class="icon icon-chevron-left"
+																viewBox="0 0 14 14"
+															>
+																<path
+																	d="M10.129.604a1.125 1.125 0 0 0-1.591 0L3.023 6.12s.049-.049-.003.004l-.082.08c-.439.44-.44 1.153 0 1.592l5.6 5.6a1.125 1.125 0 0 0 1.59-1.59L5.325 7l4.805-4.805c.44-.439.44-1.151 0-1.59z"
+																	fill="#fff"
+																/>
+															</svg>
+														</button>
+													</div>
+													<a
+														href="/collections/tables"
+														class="mobile-nav__sublist-link mobile-nav__sublist-header"
+													>
+														<span class="mobile-nav__label">Tables</span>
+													</a>
+												</div>
+											</li>
+
+											<li class="mobile-nav__item border-bottom">
+												<a
+													href="/collections/staffan-holm-tables"
+													class="mobile-nav__sublist-link"
+												>
+													<span class="mobile-nav__label">Staffan Holm</span>
+												</a>
+											</li>
+
+											<li class="mobile-nav__item border-bottom">
+												<a
+													href="/collections/karoline-fesser"
+													class="mobile-nav__sublist-link"
+												>
+													<span class="mobile-nav__label">Karoline Fesser</span>
+												</a>
+											</li>
+
+											<li class="mobile-nav__item">
+												<a
+													href="/collections/gamfratesi"
+													class="mobile-nav__sublist-link"
+												>
+													<span class="mobile-nav__label">GamFratesi</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li class="mobile-nav__item border-bottom">
+								<a href="/blogs/stories" class="mobile-nav__link">
+									<span class="mobile-nav__label">Blog</span>
+								</a>
+							</li>
+
+							<li class="mobile-nav__item">
+								<a href="/pages/contact-us" class="mobile-nav__link">
+									<span class="mobile-nav__label">Contact Us</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
+			</div>
+
+			<script type="application/ld+json">
+				{
+					"@context": "http://schema.org",
+					"@type": "Organization",
+					"name": "debut-theme-lightroom",
+
+					"logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/1915\/7383\/files\/Lightroom-logo_0021eff6-7ea8-41ea-b82c-858d4989b3e5_4096x.png?v=1516989294",
+
+					"sameAs": [
+						"https:\/\/twitter.com\/shopify",
+						"https:\/\/facebook.com\/shopify",
+						"https:\/\/pinterest.com\/shopify",
+						"http:\/\/instagram.com\/shopify",
+						"",
+						"",
+						"",
+						""
+					],
+					"url": "https:\/\/debut-theme-lightroom.myshopify.com"
+				}
+			</script>
+
+			<script type="application/ld+json">
+				{
+					"@context": "http://schema.org",
+					"@type": "WebSite",
+					"name": "debut-theme-lightroom",
+					"potentialAction": {
+						"@type": "SearchAction",
+						"target": "https:\/\/debut-theme-lightroom.myshopify.com\/search?q={search_term_string}",
+						"query-input": "required name=search_term_string"
+					},
+					"url": "https:\/\/debut-theme-lightroom.myshopify.com"
+				}
+			</script>
+		</div>
+
+		<div class="page-container drawer-page-content" id="PageContainer">
+			<main
+				class="main-content js-focus-hidden"
+				id="MainContent"
+				role="main"
+				tabindex="-1"
+			>
+				<!-- BEGIN content_for_index -->
+				<div
+					id="shopify-section-hero"
+					class="shopify-section index-section index-section--flush"
+				>
+					<div data-section-id="hero" data-section-type="hero-section">
+						<div
+							class="hero hero--x-large hero-hero hero__overlay box ratio-container lazyload js"
+							id="Hero-hero"
+							data-layout="full_width"
+							data-bg="assets/img/Hero-adjusted-2_300x300.jpg"
+							data-bgset="assets/img/Hero-adjusted-2_180x.jpg 180w 118h,
+    assets/img/Hero-adjusted-2_360x.jpg 360w 236h,
+    assets/img/Hero-adjusted-2_540x.jpg 540w 353h,
+    assets/img/Hero-adjusted-2_720x.jpg 720w 471h,
+    assets/img/Hero-adjusted-2_900x.jpg 900w 589h,
+    assets/img/Hero-adjusted-2_1080x.jpg 1080w 707h,
+    assets/img/Hero-adjusted-2_1296x.jpg 1296w 848h,
+    assets/img/Hero-adjusted-2_1512x.jpg 1512w 989h,
+    assets/img/Hero-adjusted-2_1728x.jpg 1728w 1131h,
+    assets/img/Hero-adjusted-2_1950x.jpg 1950w 1276h,
+
+
+    assets/img/Hero-adjusted-2.jpg 2048w 1340h"
+							data-sizes="auto"
+							data-parent-fit="cover"
+							style="
+								background-position: center;
+								background-image: url(assets/img/Hero-adjusted-2_300x300.jpg);
+							"
+						>
+							<div class="hero__inner">
+								<div class="page-width text-center">
+									<h2 class="h1 mega-title mega-title--large">
+										Every product has a story
+									</h2>
+									<div class="rte-setting mega-subtitle mega-subtitle--large">
+										<p>
+											Together with the most engaging designer of today, we
+											create original product of high quality, at great prices.
+										</p>
+									</div>
+									<a
+										href="/pages/about-us"
+										class="btn hero__btn"
+										aria-label="discover: About Us"
+										>discover</a
+									>
+								</div>
+							</div>
+						</div>
+						<noscript>
+							<div
+								class="hero hero--x-large hero__overlay"
+								style="
+									background-image: url('assets/img/Hero-adjusted-2_2048x.jpg?v=1537539965');
+									background-position: center center;
+								"
+							></div>
+						</noscript>
+					</div>
+				</div>
+				<div
+					id="shopify-section-featured-collections"
+					class="shopify-section index-section"
+				>
+					<div class="page-width">
+						<div class="section-header text-center">
+							<h2>Trending products</h2>
+						</div>
+
+						<ul class="grid grid--uniform grid--view-items">
+							<li
+								class="grid__item grid__item--featured-collections small--one-half medium-up--one-third"
+							>
+								<div class="grid-view-item product-card">
+									<a
+										class="grid-view-item__link grid-view-item__image-container full-width-link"
+										href="/collections/trending-products/products/udon-chair-by-staffan-holm"
+									>
+										<span class="visually-hidden"
+											>Udon Chair by Staffan Holm</span
+										>
+									</a>
+
+									<style>
+										#ProductCardImage-featured-collections-9576789250 {
+											max-width: 517.6263736263736px;
+											max-height: 345px;
+										}
+
+										#ProductCardImageWrapper-featured-collections-9576789250 {
+											max-width: 517.6263736263736px;
+										}
+									</style>
+
+									<div
+										class="product-card__image-with-placeholder-wrapper"
+										data-image-with-placeholder-wrapper
+									>
+										<div
+											id="ProductCardImageWrapper-featured-collections-9576789250"
+											class="grid-view-item__image-wrapper product-card__image-wrapper js"
+										>
+											<div style="padding-top: 66.650390625%">
+												<img
+													id="ProductCardImage-featured-collections-9576789250"
+													class="grid-view-item__image lazyload"
+													alt="Udon Chair Natural"
+													data-src="assets/img/chaise-dossier_{width}x.jpg"
+													data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+													data-aspectratio="1.5003663003663004"
+													data-sizes="auto"
+													data-image
+												/>
+											</div>
+										</div>
+										<div
+											class="placeholder-background placeholder-background--animation"
+											data-image-placeholder
+										></div>
+									</div>
+
+									<noscript>
+										<img
+											class="grid-view-item__image"
+											src="assets/img/chaise-dossier_345x345@2x.jpg"
+											alt="Udon Chair Natural"
+											style="max-width: 517.6263736263736px"
+										/>
+									</noscript>
+
+									<div
+										class="h4 grid-view-item__title product-card__title"
+										aria-hidden="true"
+									>
+										Udon Chair by Staffan Holm
+									</div>
+
+									<dl class="price price--listing">
+										<div class="price__vendor price__vendor--listing">
+											<dt>
+												<span class="visually-hidden">Vendor</span>
+											</dt>
+											<dd>Hem</dd>
+										</div>
+
+										<div class="price__regular">
+											<dt>
+												<span class="visually-hidden visually-hidden--inline"
+													>Regular price</span
+												>
+											</dt>
+											<dd>
+												<span class="price-item price-item--regular"
+													>$299.00
+												</span>
+											</dd>
+										</div>
+										<div class="price__sale">
+											<dt>
+												<span class="visually-hidden visually-hidden--inline"
+													>Sale price</span
+												>
+											</dt>
+											<dd>
+												<span class="price-item price-item--sale"
+													>$299.00
+												</span>
+											</dd>
+											<div class="price__compare">
+												<dt>
+													<span class="visually-hidden visually-hidden--inline"
+														>Regular price</span
+													>
+												</dt>
+												<dd>
+													<s class="price-item price-item--regular"> </s>
+												</dd>
+											</div>
+										</div>
+										<div class="price__unit">
+											<dt>
+												<span class="visually-hidden visually-hidden--inline"
+													>Unit price</span
+												>
+											</dt>
+											<dd class="price-unit-price">
+												<span></span><span aria-hidden="true">/</span
+												><span class="visually-hidden">per&nbsp;</span
+												><span></span>
+											</dd>
+										</div>
+										<div class="price__badges price__badges--listing">
+											<span
+												class="price__badge price__badge--sale"
+												aria-hidden="true"
+											>
+												<span>Sale</span>
+											</span>
+											<span class="price__badge price__badge--sold-out">
+												<span>Sold out</span>
+											</span>
+										</div>
+									</dl>
+								</div>
+							</li>
+
+							<li
+								class="grid__item grid__item--featured-collections small--one-half medium-up--one-third"
+							>
+								<div class="grid-view-item product-card">
+									<a
+										class="grid-view-item__link grid-view-item__image-container full-width-link"
+										href="/collections/trending-products/products/key-side-table-by-gamfratesi"
+									>
+										<span class="visually-hidden"
+											>Key Side Table by GamFratesi</span
+										>
+									</a>
+
+									<style>
+										#ProductCardImage-featured-collections-9577746818 {
+											max-width: 517.6263736263736px;
+											max-height: 345px;
+										}
+
+										#ProductCardImageWrapper-featured-collections-9577746818 {
+											max-width: 517.6263736263736px;
+										}
+									</style>
+
+									<div
+										class="product-card__image-with-placeholder-wrapper"
+										data-image-with-placeholder-wrapper
+									>
+										<div
+											id="ProductCardImageWrapper-featured-collections-9577746818"
+											class="grid-view-item__image-wrapper product-card__image-wrapper js"
+										>
+											<div style="padding-top: 66.650390625%">
+												<img
+													id="ProductCardImage-featured-collections-9577746818"
+													class="grid-view-item__image lazyload"
+													alt="Key Side Table Light Cork Black"
+													data-src="assets/img/tabouret_{width}x.jpg?v=1493653886"
+													data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+													data-aspectratio="1.5003663003663004"
+													data-sizes="auto"
+													data-image
+												/>
+											</div>
+										</div>
+										<div
+											class="placeholder-background placeholder-background--animation"
+											data-image-placeholder
+										></div>
+									</div>
+
+									<noscript>
+										<img
+											class="grid-view-item__image"
+											src="assets/img/tabouret_345x345@2x.jpg?v=1493653886"
+											alt="Key Side Table Light Cork Black"
+											style="max-width: 517.6263736263736px"
+										/>
+									</noscript>
+
+									<div
+										class="h4 grid-view-item__title product-card__title"
+										aria-hidden="true"
+									>
+										Key Side Table by GamFratesi
+									</div>
+
+									<dl class="price price--listing price--on-sale">
+										<div class="price__vendor price__vendor--listing">
+											<dt>
+												<span class="visually-hidden">Vendor</span>
+											</dt>
+											<dd>Hem</dd>
+										</div>
+
+										<div class="price__regular">
+											<dt>
+												<span class="visually-hidden visually-hidden--inline"
+													>Regular price</span
+												>
+											</dt>
+											<dd>
+												<span class="price-item price-item--regular"
+													>$143.00
+												</span>
+											</dd>
+										</div>
+										<div class="price__sale">
+											<dt>
+												<span class="visually-hidden visually-hidden--inline"
+													>Sale price</span
+												>
+											</dt>
+											<dd>
+												<span class="price-item price-item--sale"
+													>$143.00
+												</span>
+											</dd>
+											<div class="price__compare">
+												<dt>
+													<span class="visually-hidden visually-hidden--inline"
+														>Regular price</span
+													>
+												</dt>
+												<dd>
+													<s class="price-item price-item--regular">
+														$179.00
+													</s>
+												</dd>
+											</div>
+										</div>
+										<div class="price__unit">
+											<dt>
+												<span class="visually-hidden visually-hidden--inline"
+													>Unit price</span
+												>
+											</dt>
+											<dd class="price-unit-price">
+												<span></span><span aria-hidden="true">/</span
+												><span class="visually-hidden">per&nbsp;</span
+												><span></span>
+											</dd>
+										</div>
+										<div class="price__badges price__badges--listing">
+											<span
+												class="price__badge price__badge--sale"
+												aria-hidden="true"
+											>
+												<span>Sale</span>
+											</span>
+											<span class="price__badge price__badge--sold-out">
+												<span>Sold out</span>
+											</span>
+										</div>
+									</dl>
+								</div>
+							</li>
+
+							<li
+								class="grid__item grid__item--featured-collections small--one-half medium-up--one-third"
+							>
+								<div class="grid-view-item product-card">
+									<a
+										class="grid-view-item__link grid-view-item__image-container full-width-link"
+										href="/collections/trending-products/products/drifted-chair-by-lars-beller-fjetland"
+									>
+										<span class="visually-hidden"
+											>Drifted Chair by Lars Beller Fjetland</span
+										>
+									</a>
+
+									<style>
+										#ProductCardImage-featured-collections-9576949954 {
+											max-width: 517.6263736263736px;
+											max-height: 345px;
+										}
+
+										#ProductCardImageWrapper-featured-collections-9576949954 {
+											max-width: 517.6263736263736px;
+										}
+									</style>
+
+									<div
+										class="product-card__image-with-placeholder-wrapper"
+										data-image-with-placeholder-wrapper
+									>
+										<div
+											id="ProductCardImageWrapper-featured-collections-9576949954"
+											class="grid-view-item__image-wrapper product-card__image-wrapper js"
+										>
+											<div style="padding-top: 66.650390625%">
+												<img
+													id="ProductCardImage-featured-collections-9576949954"
+													class="grid-view-item__image lazyload"
+													alt="Drifted Chair Dark Cork Oak"
+													data-src="//cdn.shopify.com/s/files/1/1915/7383/products/53c12350-925a-4a46-afa3-cb12e8e10517_2048x2048_75008383-c742-4db1-aace-7c6e2991c3b6_{width}x.jpeg?v=1493654447"
+													data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+													data-aspectratio="1.5003663003663004"
+													data-sizes="auto"
+													data-image
+												/>
+											</div>
+										</div>
+										<div
+											class="placeholder-background placeholder-background--animation"
+											data-image-placeholder
+										></div>
+									</div>
+
+									<noscript>
+										<img
+											class="grid-view-item__image"
+											src="//cdn.shopify.com/s/files/1/1915/7383/products/53c12350-925a-4a46-afa3-cb12e8e10517_2048x2048_75008383-c742-4db1-aace-7c6e2991c3b6_345x345@2x.jpeg?v=1493654447"
+											alt="Drifted Chair Dark Cork Oak"
+											style="max-width: 517.6263736263736px"
+										/>
+									</noscript>
+
+									<div
+										class="h4 grid-view-item__title product-card__title"
+										aria-hidden="true"
+									>
+										Drifted Chair by Lars Beller Fjetland
+									</div>
+
+									<dl class="price price--listing price--on-sale">
+										<div class="price__vendor price__vendor--listing">
+											<dt>
+												<span class="visually-hidden">Vendor</span>
+											</dt>
+											<dd>Hem</dd>
+										</div>
+
+										<div class="price__regular">
+											<dt>
+												<span class="visually-hidden visually-hidden--inline"
+													>Regular price</span
+												>
+											</dt>
+											<dd>
+												<span class="price-item price-item--regular"
+													>$179.00
+												</span>
+											</dd>
+										</div>
+										<div class="price__sale">
+											<dt>
+												<span class="visually-hidden visually-hidden--inline"
+													>Sale price</span
+												>
+											</dt>
+											<dd>
+												<span class="price-item price-item--sale"
+													>$179.00
+												</span>
+											</dd>
+											<div class="price__compare">
+												<dt>
+													<span class="visually-hidden visually-hidden--inline"
+														>Regular price</span
+													>
+												</dt>
+												<dd>
+													<s class="price-item price-item--regular">
+														$299.00
+													</s>
+												</dd>
+											</div>
+										</div>
+										<div class="price__unit">
+											<dt>
+												<span class="visually-hidden visually-hidden--inline"
+													>Unit price</span
+												>
+											</dt>
+											<dd class="price-unit-price">
+												<span></span><span aria-hidden="true">/</span
+												><span class="visually-hidden">per&nbsp;</span
+												><span></span>
+											</dd>
+										</div>
+										<div class="price__badges price__badges--listing">
+											<span
+												class="price__badge price__badge--sale"
+												aria-hidden="true"
+											>
+												<span>Sale</span>
+											</span>
+											<span class="price__badge price__badge--sold-out">
+												<span>Sold out</span>
+											</span>
+										</div>
+									</dl>
+								</div>
+							</li>
+						</ul>
+
+						<hr class="hr--invisible" aria-hidden="true" />
+						<div class="text-center">
+							<a
+								href="/collections/trending-products"
+								class="btn"
+								aria-label="View all products in the Trending Products collection"
+							>
+								View all
+							</a>
+						</div>
+					</div>
+				</div>
+				<div
+					id="shopify-section-slideshow"
+					class="shopify-section index-section index-section--flush index-section--slideshow"
+				>
+					<div
+						data-section-id="slideshow"
+						data-section-type="slideshow-section"
+					>
+						<div
+							id="SlideshowWrapper-slideshow"
+							class="slideshow-wrapper"
+							role="region"
+							aria-label="slideshow"
+							aria-describedby="slideshow-info"
+							tabindex="-1"
+						>
+							<div
+								class="slideshow slideshow--medium"
+								id="Slideshow-slideshow"
+								data-autorotate="true"
+								data-speed="5000"
+								data-adapt-height="false"
+								data-slide-nav-a11y="Load slide [slide_number]"
+							>
+								<div class="slideshow__slide slideshow__slide--slideshow-0">
+									<div
+										role="img"
+										aria-label="hem sofa and table"
+										data-alt="hem sofa and table"
+										class="slideshow__image box ratio-container lazyload js"
+										data-bg="assets/img/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_300x300.jpg?v=1516988643"
+										data-bgset="//cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_180x.jpg?v=1516988643 180w 120h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_360x.jpg?v=1516988643 360w 240h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_540x.jpg?v=1516988643 540w 360h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_720x.jpg?v=1516988643 720w 480h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_900x.jpg?v=1516988643 900w 600h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_1080x.jpg?v=1516988643 1080w 720h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_1296x.jpg?v=1516988643 1296w 864h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_1512x.jpg?v=1516988643 1512w 1008h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_1728x.jpg?v=1516988643 1728w 1152h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_1950x.jpg?v=1516988643 1950w 1300h,
+
+
+
+
+
+
+
+
+    //cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0.jpg?v=1516988643 2048w 1365h"
+										data-sizes="auto"
+										data-parent-fit="contain"
+										style="
+											background-position: center center;
+											background-image: url('//cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_300x300.jpg?v=1516988643');
+										"
+									>
+										<div class="slideshow__overlay"></div>
+									</div>
+
+									<noscript>
+										<div
+											class="slideshow__image"
+											role="img"
+											aria-label="hem sofa and table"
+											style="
+												background-image: url('//cdn.shopify.com/s/files/1/1915/7383/files/HEM_DSC9239-1_2048x2048_364e4292-9432-4e4d-905a-fab92d78d7a0_2048x.jpg?v=1516988643');
+												background-position: center center;
+											"
+										></div>
+									</noscript>
+
+									<div
+										class="slideshow__text-wrap slideshow__text-wrap--desktop"
+									>
+										<div
+											class="slideshow__text-content slideshow__text-content--vertical-center text-center"
+										>
+											<div class="page-width">
+												<ul class="slideshow__text-content-list">
+													<li>
+														<h2 class="h1 mega-title slideshow__title">
+															We design for how people live today.
+														</h2>
+													</li>
+													<li>
+														<span class="mega-subtitle slideshow__subtitle">
+															Tell your brand&#39;s story through images
+														</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slideshow__slide slideshow__slide--1492095993817">
+									<div
+										role="img"
+										aria-label="hem designer at work"
+										data-alt="hem designer at work"
+										class="slideshow__image box ratio-container lazyload lazypreload js"
+										data-bg="//cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_300x300.jpg?v=1516988643"
+										data-bgset="//cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_180x.jpg?v=1516988643 180w 96h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_360x.jpg?v=1516988643 360w 191h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_540x.jpg?v=1516988643 540w 287h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_720x.jpg?v=1516988643 720w 383h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_900x.jpg?v=1516988643 900w 479h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_1080x.jpg?v=1516988643 1080w 574h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_1296x.jpg?v=1516988643 1296w 689h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_1512x.jpg?v=1516988643 1512w 804h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_1728x.jpg?v=1516988643 1728w 919h,
+
+
+
+
+
+
+
+
+
+    //cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790.jpg?v=1516988643 1800w 957h"
+										data-sizes="auto"
+										data-parent-fit="contain"
+										style="
+											background-position: center;
+											background-image: url('//cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_300x300.jpg?v=1516988643');
+										"
+									>
+										<div class="slideshow__overlay"></div>
+									</div>
+
+									<noscript>
+										<div
+											class="slideshow__image"
+											role="img"
+											aria-label="hem designer at work"
+											style="
+												background-image: url('//cdn.shopify.com/s/files/1/1915/7383/files/about_4_image_2048x2048_92fce5e4-6b63-4767-ba45-38f7c5d7f790_2048x.jpg?v=1516988643');
+												background-position: center;
+											"
+										></div>
+									</noscript>
+
+									<div
+										class="slideshow__text-wrap slideshow__text-wrap--desktop"
+									>
+										<div
+											class="slideshow__text-content slideshow__text-content--vertical-center text-center"
+										>
+											<div class="page-width">
+												<ul class="slideshow__text-content-list">
+													<li>
+														<h2 class="h1 mega-title slideshow__title">
+															Dreamt up, designed, and manufactured exclusively
+															for our customers.
+														</h2>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="slideshow__controls">
+								<div class="slideshow__arrows" style="width: 151px">
+									<button
+										class="slideshow__arrow slideshow__arrow-left"
+										aria-label="Previous slide"
+									>
+										<svg
+											aria-hidden="true"
+											focusable="false"
+											role="presentation"
+											class="icon icon-chevron-left"
+											viewBox="0 0 14 14"
+										>
+											<path
+												d="M10.129.604a1.125 1.125 0 0 0-1.591 0L3.023 6.12s.049-.049-.003.004l-.082.08c-.439.44-.44 1.153 0 1.592l5.6 5.6a1.125 1.125 0 0 0 1.59-1.59L5.325 7l4.805-4.805c.44-.439.44-1.151 0-1.59z"
+												fill="#fff"
+											/>
+										</svg>
+									</button>
+									<button
+										class="slideshow__arrow slideshow__arrow-right"
+										aria-label="Next slide"
+									>
+										<svg
+											aria-hidden="true"
+											focusable="false"
+											role="presentation"
+											class="icon icon-chevron-right"
+											viewBox="0 0 14 14"
+										>
+											<path
+												d="M3.871.604c.44-.439 1.152-.439 1.591 0l5.515 5.515s-.049-.049.003.004l.082.08c.439.44.44 1.153 0 1.592l-5.6 5.6a1.125 1.125 0 0 1-1.59-1.59L8.675 7 3.87 2.195a1.125 1.125 0 0 1 0-1.59z"
+												fill="#fff"
+											/>
+										</svg>
+									</button>
+								</div>
+								<button
+									type="button"
+									class="slideshow__pause"
+									data-id="slideshow"
+									aria-live="polite"
+									aria-pressed="false"
+								>
+									<span class="slideshow__pause-stop">
+										<svg
+											aria-hidden="true"
+											focusable="false"
+											role="presentation"
+											class="icon icon-pause"
+											viewBox="0 0 9.52 11"
+										>
+											<path
+												d="M1.5 11A1.5 1.5 0 0 1 0 9.5v-8a1.5 1.5 0 0 1 3 0v8A1.5 1.5 0 0 1 1.5 11zM8 11a1.5 1.5 0 0 1-1.5-1.5v-8a1.5 1.5 0 1 1 3 0v8A1.5 1.5 0 0 1 8 11z"
+												fill="#fff"
+											/>
+										</svg>
+										<span class="icon__fallback-text">Pause slideshow</span>
+									</span>
+									<span class="slideshow__pause-rotate">
+										<svg
+											aria-hidden="true"
+											focusable="false"
+											role="presentation"
+											class="icon icon-play"
+											viewBox="0 0 20 40"
+										>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M23.6 16.8L7 1.5C5.6.3 4 .2 2.9.7 1.6 1.4.8 2.7.7 3.8v31.7c0 1.8 1.1 3.3 3.1 3.3 1.5 0 2.5-.5 3.4-1.4l16.4-15.7c1.5-1.4 1.5-3.6 0-4.9z"
+											/>
+										</svg>
+										<span class="icon__fallback-text">Play slideshow</span>
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="slideshow__text-wrap slideshow__text-wrap--mobile">
+							<div class="slideshow__arrows slideshow__arrows--mobile">
+								<button
+									class="slideshow__arrow slideshow__arrow-left"
+									aria-label="Previous slide"
+								>
+									<svg
+										aria-hidden="true"
+										focusable="false"
+										role="presentation"
+										class="icon icon-chevron-left"
+										viewBox="0 0 14 14"
+									>
+										<path
+											d="M10.129.604a1.125 1.125 0 0 0-1.591 0L3.023 6.12s.049-.049-.003.004l-.082.08c-.439.44-.44 1.153 0 1.592l5.6 5.6a1.125 1.125 0 0 0 1.59-1.59L5.325 7l4.805-4.805c.44-.439.44-1.151 0-1.59z"
+											fill="#fff"
+										/>
+									</svg>
+								</button>
+								<button
+									class="slideshow__arrow slideshow__arrow-right"
+									aria-label="Next slide"
+								>
+									<svg
+										aria-hidden="true"
+										focusable="false"
+										role="presentation"
+										class="icon icon-chevron-right"
+										viewBox="0 0 14 14"
+									>
+										<path
+											d="M3.871.604c.44-.439 1.152-.439 1.591 0l5.515 5.515s-.049-.049.003.004l.082.08c.439.44.44 1.153 0 1.592l-5.6 5.6a1.125 1.125 0 0 1-1.59-1.59L8.675 7 3.87 2.195a1.125 1.125 0 0 1 0-1.59z"
+											fill="#fff"
+										/>
+									</svg>
+								</button>
+							</div>
+
+							<div
+								class="slideshow__text-content slideshow__text-content--mobile slideshow__text-content--mobile-0 text-center"
+							>
+								<div class="page-width">
+									<h2
+										class="h1 mega-title slideshow__title slideshow__title--mobile"
+									>
+										We design for how people live today.
+									</h2>
+									<span
+										class="mega-subtitle slideshow__subtitle slideshow__subtitle--mobile"
+									>
+										Tell your brand&#39;s story through images
+									</span>
+								</div>
+							</div>
+							<div
+								class="slideshow__text-content slideshow__text-content--mobile slideshow__text-content--mobile-1 text-center"
+							>
+								<div class="page-width">
+									<h2
+										class="h1 mega-title slideshow__title slideshow__title--mobile"
+									>
+										Dreamt up, designed, and manufactured exclusively for our
+										customers.
+									</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					id="shopify-section-1579625096529"
+					class="shopify-section index-section"
+				>
+					<div class="page-width">
+						<div class="custom-content">
+							<div
+								class="custom__item custom__item--text custom__item--1579625096529-0 one-whole align--center"
+							>
+								<div class="custom__item-inner custom__item-inner--text">
+									<div class="medium-up--text-center">
+										<h4 class="h3">Assembly made easy</h4>
+
+										<div class="rte-setting rte">
+											<p>
+												Everyday we find innovative assembly solutions to make
+												things even easier for you because we care about the
+												quality of our products.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="custom__item custom__item--html custom__item--1579625139350 one-whole"
+							>
+								<div class="custom__item-inner custom__item-inner--html">
+									<iframe
+										src="https://player.vimeo.com/video/132544718?loop=1&amp;color=d3eef5&amp;title=0&amp;byline=0&amp;portrait=0"
+										width="1091"
+										height="614"
+										frameborder="0"
+										webkitallowfullscreen=""
+										mozallowfullscreen=""
+										allowfullscreen=""
+									></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					id="shopify-section-1492096252560"
+					class="shopify-section index-section"
+				>
+					<div class="page-width">
+						<div class="section-header text-center">
+							<h2>Collections</h2>
+						</div>
+
+						<div class="collection-grid">
+							<ul class="grid grid--uniform">
+								<li class="grid__item small--one-half medium-up--one-third">
+									<div class="collection-grid-item">
+										<a
+											href="/collections/chairs"
+											class="collection-grid-item__link"
+										>
+											<div
+												class="collection-grid-item__overlay box ratio-container lazyload js"
+												data-bgset="//cdn.shopify.com/s/files/1/1915/7383/collections/Z_180x.jpg?v=1491858138 180w 101h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_360x.jpg?v=1491858138 360w 203h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_540x.jpg?v=1491858138 540w 304h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_720x.jpg?v=1491858138 720w 405h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_900x.jpg?v=1491858138 900w 507h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_1080x.jpg?v=1491858138 1080w 608h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_1296x.jpg?v=1491858138 1296w 730h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_1512x.jpg?v=1491858138 1512w 851h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_1728x.jpg?v=1491858138 1728w 973h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_1950x.jpg?v=1491858138 1950w 1098h,
+
+
+
+
+
+
+
+
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z.jpg?v=1491858138 2048w 1153h"
+												data-sizes="auto"
+												data-parent-fit="cover"
+												style="
+													background-image: url('//cdn.shopify.com/s/files/1/1915/7383/collections/Z_300x300.jpg?v=1491858138');
+												"
+											></div>
+											<noscript>
+												<div
+													class="collection-grid-item__overlay"
+													style="
+														background-image: url('//cdn.shopify.com/s/files/1/1915/7383/collections/Z_1024x1024.jpg?v=1491858138');
+													"
+												></div>
+											</noscript>
+
+											<div class="collection-grid-item__title-wrapper">
+												<div class="collection-grid-item__title h3">Chairs</div>
+											</div>
+										</a>
+									</div>
+								</li>
+
+								<li class="grid__item small--one-half medium-up--one-third">
+									<div class="collection-grid-item">
+										<a
+											href="/collections/sofas"
+											class="collection-grid-item__link"
+										>
+											<div
+												class="collection-grid-item__overlay box ratio-container lazyload js"
+												data-bgset="//cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_180x.jpg?v=1492700080 180w 101h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_360x.jpg?v=1492700080 360w 203h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_540x.jpg?v=1492700080 540w 304h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_720x.jpg?v=1492700080 720w 405h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_900x.jpg?v=1492700080 900w 506h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_1080x.jpg?v=1492700080 1080w 608h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_1296x.jpg?v=1492700080 1296w 729h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_1512x.jpg?v=1492700080 1512w 851h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_1728x.jpg?v=1492700080 1728w 972h,
+
+
+
+
+
+
+
+
+
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db.jpg?v=1492700080 1808w 1017h"
+												data-sizes="auto"
+												data-parent-fit="cover"
+												style="
+													background-image: url('//cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_300x300.jpg?v=1492700080');
+												"
+											></div>
+											<noscript>
+												<div
+													class="collection-grid-item__overlay"
+													style="
+														background-image: url('//cdn.shopify.com/s/files/1/1915/7383/collections/Z_e6fb1b14-5357-4a46-b331-ca5cbe1669db_1024x1024.jpg?v=1492700080');
+													"
+												></div>
+											</noscript>
+
+											<div class="collection-grid-item__title-wrapper">
+												<div class="collection-grid-item__title h3">Sofas</div>
+											</div>
+										</a>
+									</div>
+								</li>
+
+								<li class="grid__item small--one-half medium-up--one-third">
+									<div class="collection-grid-item">
+										<a
+											href="/collections/tables"
+											class="collection-grid-item__link"
+										>
+											<div
+												class="collection-grid-item__overlay box ratio-container lazyload js"
+												data-bgset="//cdn.shopify.com/s/files/1/1915/7383/collections/Z23_180x.jpg?v=1492700287 180w 101h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z23_360x.jpg?v=1492700287 360w 203h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z23_540x.jpg?v=1492700287 540w 304h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z23_720x.jpg?v=1492700287 720w 405h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z23_900x.jpg?v=1492700287 900w 506h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z23_1080x.jpg?v=1492700287 1080w 608h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z23_1296x.jpg?v=1492700287 1296w 729h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z23_1512x.jpg?v=1492700287 1512w 851h,
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z23_1728x.jpg?v=1492700287 1728w 972h,
+
+
+
+
+
+
+
+
+
+    //cdn.shopify.com/s/files/1/1915/7383/collections/Z23.jpg?v=1492700287 1808w 1017h"
+												data-sizes="auto"
+												data-parent-fit="cover"
+												style="
+													background-image: url('//cdn.shopify.com/s/files/1/1915/7383/collections/Z23_300x300.jpg?v=1492700287');
+												"
+											></div>
+											<noscript>
+												<div
+													class="collection-grid-item__overlay"
+													style="
+														background-image: url('//cdn.shopify.com/s/files/1/1915/7383/collections/Z23_1024x1024.jpg?v=1492700287');
+													"
+												></div>
+											</noscript>
+
+											<div class="collection-grid-item__title-wrapper">
+												<div class="collection-grid-item__title h3">Tables</div>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div
+					id="shopify-section-1492033877875"
+					class="shopify-section index-section"
+				>
+					<div
+						class="page-width"
+						data-section-id="1492033877875"
+						data-section-type="quotes"
+					>
+						<div class="section-header text-center">
+							<h2>Testimonials</h2>
+						</div>
+
+						<div class="quotes-wrapper">
+							<div
+								class="quotes-slider"
+								id="Quotes-1492033877875"
+								data-count="1"
+							>
+								<div class="quotes-slide--1492033877875-0">
+									<blockquote class="quotes-slider__text text-center">
+										<span class="quote-icon"
+											><svg
+												aria-hidden="true"
+												focusable="false"
+												role="presentation"
+												class="icon icon-quote"
+												viewBox="0 0 41 35"
+											>
+												<path
+													d="M10.208 17.711h6.124v16.332H0V21.684C0 8.184 5.444.956 16.332 0v6.125c-4.083 1.14-6.124 4.414-6.124 9.82v1.766zm24.498 0h6.124v16.332H24.498V21.684C24.498 8.184 29.942.956 40.83 0v6.125c-4.083 1.14-6.124 4.414-6.124 9.82v1.766z"
+													fill="#000"
+													fill-rule="evenodd"
+												/></svg
+										></span>
+
+										<div class="rte-setting rte">
+											<p>
+												The price points are a bit higher than your Billy's and
+												Karlstad's, but in return you won't have the same
+												bookshelf and sofa as 90 percent of recent college
+												grads.
+											</p>
+										</div>
+
+										<cite>Dwell</cite>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					id="shopify-section-1579625307946"
+					class="shopify-section index-section"
+				>
+					<div class="page-width">
+						<header class="section-header text-center">
+							<h2>Stories</h2>
+						</header>
+
+						<ul class="grid grid--uniform grid--blog">
+							<li class="grid__item medium-up--one-third">
+								<a
+									href="/blogs/stories/for-the-love-of-wood"
+									class="article__link"
+								>
+									<style>
+										#ArticleImage-155778 {
+											max-width: 517.6263736263736px;
+											max-height: 345px;
+										}
+
+										#ArticleImageWrapper-155778 {
+											max-width: 517.6263736263736px;
+										}
+									</style>
+
+									<div
+										id="ArticleImageWrapper-155778"
+										class="article__grid-image-wrapper js"
+									>
+										<div
+											class="article__grid-image-container"
+											style="padding-top: 66.650390625%"
+										>
+											<img
+												id="ArticleImage-155778"
+												class="article__grid-image lazyload"
+												src="assets/img/wood-love_300x300.jpg?v=1493402567"
+												data-src="assets/img/wood-love_{width}x.jpg?v=1493402567"
+												data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+												data-aspectratio="1.5003663003663004"
+												data-sizes="auto"
+												alt=""
+											/>
+										</div>
+									</div>
+									<noscript>
+										<div class="article__grid-image-wrapper">
+											<img
+												src="assets/img/wood-love_345x345@2x.jpg?v=1493402567"
+												alt="For the Love of Wood"
+												class="article__grid-image"
+											/>
+										</div>
+									</noscript>
+
+									<h3 class="article__title">For the Love of Wood</h3>
+								</a>
+
+								<div class="article__grid-meta">
+									<span class="article__author">by Guillaume Granger</span>
+
+									<span class="article__date">
+										<time datetime="2017-04-19T20:38:00Z">April 19, 2017</time>
+									</span>
+
+									<div class="rte article__grid-excerpt">
+										<meta charset="utf-8" /><span style="font-weight: 400"
+											>Beautiful and durable—oak holds a special place in our
+											hearts. From the bent curves of Lars Beller Fjetland's
+											Drifted collection.</span
+										>
+									</div>
+
+									<ul class="list--inline article__meta-buttons">
+										<li>
+											<a
+												href="/blogs/stories/for-the-love-of-wood"
+												class="btn btn--tertiary btn--small"
+												aria-label="Read more: For the Love of Wood"
+											>
+												Read more
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="grid__item medium-up--one-third">
+								<a
+									href="/blogs/stories/welcome-home-hem-founder-petrus-palmer"
+									class="article__link"
+								>
+									<style>
+										#ArticleImage-155586 {
+											max-width: 510.55727554179566px;
+											max-height: 345px;
+										}
+
+										#ArticleImageWrapper-155586 {
+											max-width: 510.55727554179566px;
+										}
+									</style>
+
+									<div
+										id="ArticleImageWrapper-155586"
+										class="article__grid-image-wrapper js"
+									>
+										<div
+											class="article__grid-image-container"
+											style="padding-top: 67.57322175732217%"
+										>
+											<img
+												id="ArticleImage-155586"
+												class="article__grid-image lazyload"
+												src="//cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_300x300.jpg?v=1492544606"
+												data-src="//cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_{width}x.jpg?v=1492544606"
+												data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+												data-aspectratio="1.479876160990712"
+												data-sizes="auto"
+												alt=""
+											/>
+										</div>
+									</div>
+									<noscript>
+										<div class="article__grid-image-wrapper">
+											<img
+												src="//cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_345x345@2x.jpg?v=1492544606"
+												alt="Welcome Home, Hem founder Petrus Palmér"
+												class="article__grid-image"
+											/>
+										</div>
+									</noscript>
+
+									<h3 class="article__title">
+										Welcome Home, Hem founder Petrus Palmér
+									</h3>
+								</a>
+
+								<div class="article__grid-meta">
+									<span class="article__author">by Melissa Perreault</span>
+
+									<span class="article__date">
+										<time datetime="2017-04-18T15:42:00Z">April 18, 2017</time>
+									</span>
+
+									<div class="rte article__grid-excerpt">
+										<meta charset="utf-8" /><span style="font-weight: 400"
+											>﻿Hem means home, and home is where the heart is. For Hem
+											founder Petrus Palmér and his family, home is located in a
+											remodeled blacksmith’s workshop situated in the Stockholm
+											city center.</span
+										>
+									</div>
+
+									<ul class="list--inline article__meta-buttons">
+										<li>
+											<a
+												href="/blogs/stories/welcome-home-hem-founder-petrus-palmer"
+												class="btn btn--tertiary btn--small"
+												aria-label="Read more: Welcome Home, Hem founder Petrus Palmér"
+											>
+												Read more
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="grid__item medium-up--one-third">
+								<a
+									href="/blogs/stories/hem-pro-is-here-br-lets-get-down-to-business"
+									class="article__link"
+								>
+									<style>
+										#ArticleImage-155458 {
+											max-width: 510.88937093275484px;
+											max-height: 345px;
+										}
+
+										#ArticleImageWrapper-155458 {
+											max-width: 510.88937093275484px;
+										}
+									</style>
+
+									<div
+										id="ArticleImageWrapper-155458"
+										class="article__grid-image-wrapper js"
+									>
+										<div
+											class="article__grid-image-container"
+											style="padding-top: 67.529296875%"
+										>
+											<img
+												id="ArticleImage-155458"
+												class="article__grid-image lazyload"
+												src="//cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_300x300.jpg?v=1492544685"
+												data-src="//cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_{width}x.jpg?v=1492544685"
+												data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+												data-aspectratio="1.4808387563268257"
+												data-sizes="auto"
+												alt=""
+											/>
+										</div>
+									</div>
+									<noscript>
+										<div class="article__grid-image-wrapper">
+											<img
+												src="//cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_345x345@2x.jpg?v=1492544685"
+												alt="Hem Pro is here. Let&#39;s get down to business!"
+												class="article__grid-image"
+											/>
+										</div>
+									</noscript>
+
+									<h3 class="article__title">
+										Hem Pro is here. Let's get down to business!
+									</h3>
+								</a>
+
+								<div class="article__grid-meta">
+									<span class="article__author">by Guillaume Granger</span>
+
+									<span class="article__date">
+										<time datetime="2017-04-18T15:39:00Z">April 18, 2017</time>
+									</span>
+
+									<div class="rte article__grid-excerpt">
+										<meta charset="utf-8" /><meta charset="utf-8" /><span
+											>Hem Pro is our dedicated tool for interior professionals
+											to browse our products, place orders with trade pricing,
+											and get access to real time inventory.</span
+										>
+									</div>
+
+									<ul class="list--inline article__meta-buttons">
+										<li>
+											<a
+												href="/blogs/stories/hem-pro-is-here-br-lets-get-down-to-business"
+												class="btn btn--tertiary btn--small"
+												aria-label="Read more: Hem Pro is here. Let&#39;s get down to business!"
+											>
+												Read more
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div
+					id="shopify-section-1492033809691"
+					class="shopify-section index-section index-section--flush-medium-up"
+				>
+					<style>
+						#MapSection--1492033809691 .map-section__image {
+							background-position: center center;
+						}
+
+						@media only screen and (max-width: 750px) {
+							#MapSection--1492033809691 .map-section__image {
+								padding-top: 66.650390625%;
+							}
+						}
+					</style>
+
+					<div
+						id="MapSection--1492033809691"
+						class="map-section"
+						data-section-id="1492033809691"
+						data-section-type="map"
+					>
+						<div class="page-width map-section__wrapper">
+							<div class="map-section__content-wrapper">
+								<div class="map-section__content">
+									<h2 class="visually-hidden visually-hidden--static">
+										Location
+									</h2>
+
+									<h3 class="h4">Our store</h3>
+
+									<div class="rte-setting">
+										<p>150 Elgin Street Ottawa<br />Ontario CA K2P 1L4</p>
+										<p>
+											Mon - Fri, 10am - 9pm<br />Saturday, 11am - 9pm<br />Sunday,
+											11am - 5pm
+										</p>
+									</div>
+
+									<p>
+										<a
+											href="https://maps.google.com?daddr=150 Elgin Street Ottawa Ontario CA K2P 1L4"
+											class="btn btn--secondary btn--small map_section__directions-btn"
+											target="_blank"
+											rel="noopener"
+											aria-describedby="a11y-new-window-external-message"
+										>
+											<svg
+												aria-hidden="true"
+												focusable="false"
+												role="presentation"
+												class="icon icon-pin"
+												viewBox="0 0 32 32"
+											>
+												<path
+													d="M4 12a12 12 0 0 1 24 0c0 8-12 20-12 20S4 20 4 12m7 0a5 5 0 0 0 10 0 5 5 0 0 0-10 0z"
+												/>
+											</svg>
+											<span>Get directions</span>
+										</a>
+									</p>
+								</div>
+							</div>
+							<div class="map-section__background-wrapper">
+								<div
+									class="map-section__image lazyload js"
+									data-bgset="//cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_180x.jpg?v=1516989287 180w 120h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_360x.jpg?v=1516989287 360w 240h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_540x.jpg?v=1516989287 540w 360h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_720x.jpg?v=1516989287 720w 480h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_900x.jpg?v=1516989287 900w 600h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_1080x.jpg?v=1516989287 1080w 720h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_1296x.jpg?v=1516989287 1296w 864h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_1512x.jpg?v=1516989287 1512w 1008h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_1728x.jpg?v=1516989287 1728w 1152h,
+    //cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_1950x.jpg?v=1516989287 1950w 1300h,
+
+
+
+
+
+
+
+
+    //cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6.jpg?v=1516989287 2048w 1365h"
+									data-sizes="auto"
+									data-parent-fit="cover"
+									style="background-image: url('//cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_300x300.jpg?v=1516989287);"
+								></div>
+								<noscript>
+									<div
+										class="map-section__image"
+										style="
+											background-image: url(//cdn.shopify.com/s/files/1/1915/7383/files/160114_HEM_THE_FRESH_FIVE_ENVIRO_2_2048x2048_fe493c4b-294c-4064-8c48-0bb096cca4c6_x800_crop_top.jpg?v=1516989287);
+										"
+									></div>
+								</noscript>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END content_for_index -->
+			</main>
+
+			<div id="shopify-section-footer" class="shopify-section">
+				<style>
+					.site-footer__hr {
+						border-bottom: 1px solid #dcdcdc;
+					}
+
+					.site-footer p,
+					.site-footer__linklist-item a,
+					.site-footer__rte a,
+					.site-footer h4,
+					.site-footer small,
+					.site-footer__copyright-content a,
+					.site-footer__newsletter-error,
+					.site-footer__social-icons .social-icons__link {
+						color: #3d4246;
+					}
+
+					.site-footer {
+						color: #3d4246;
+						background-color: #f5f5f5;
+					}
+
+					.site-footer__rte a {
+						border-bottom: 1px solid #3d4246;
+					}
+
+					.site-footer__rte a:hover,
+					.site-footer__linklist-item a:hover,
+					.site-footer__copyright-content a:hover {
+						color: #61696f;
+						border-bottom: 1px solid #61696f;
+					}
+
+					.site-footer__social-icons .social-icons__link:hover {
+						color: #61696f;
+					}
+				</style>
+				<footer
+					class="site-footer"
+					role="contentinfo"
+					data-section-id="footer"
+					data-section-type="footer-section"
+				>
+					<div class="page-width">
+						<div class="site-footer__content">
+							<div class="site-footer__item site-footer__item--one-quarter">
+								<div
+									class="site-footer__item-inner site-footer__item-inner--link_list"
+								>
+									<p class="h4"></p>
+									<ul class="site-footer__linklist">
+										<li class="site-footer__linklist-item">
+											<a href="/" aria-current="page"> Home </a>
+										</li>
+										<li class="site-footer__linklist-item">
+											<a href="/pages/about-us"> About Us </a>
+										</li>
+										<li class="site-footer__linklist-item">
+											<a href="/collections"> Furniture </a>
+										</li>
+										<li class="site-footer__linklist-item">
+											<a href="/blogs/stories"> Blog </a>
+										</li>
+										<li class="site-footer__linklist-item">
+											<a href="/pages/contact-us"> Contact Us </a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="site-footer__item site-footer__item--one-quarter">
+								<div
+									class="site-footer__item-inner site-footer__item-inner--link_list"
+								>
+									<p class="h4"></p>
+									<ul class="site-footer__linklist">
+										<li class="site-footer__linklist-item">
+											<a href="/pages/shipping-return-policy">
+												Shipping &amp; Return Policy
+											</a>
+										</li>
+										<li class="site-footer__linklist-item">
+											<a href="/policies/terms-of-service">
+												Terms of Service
+											</a>
+										</li>
+										<li class="site-footer__linklist-item">
+											<a href="/pages/privacy-policy-1"> Privacy Policy </a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div
+								class="site-footer__item site-footer__item--one-quarter site-footer-newsletter__one-half"
+							>
+								<div
+									class="site-footer__item-inner site-footer__item-inner--newsletter"
+								>
+									<p class="h4">Join our mailing list</p>
+									<div class="site-footer__newsletter">
+										<form
+											method="post"
+											action="/contact#ContactFooter"
+											id="ContactFooter"
+											accept-charset="UTF-8"
+											class="contact-form"
+											novalidate="novalidate"
+										>
+											<input
+												type="hidden"
+												name="form_type"
+												value="customer"
+											/><input type="hidden" name="utf8" value="✓" />
+											<input
+												type="hidden"
+												name="contact[tags]"
+												value="newsletter"
+											/>
+											<div class="input-group">
+												<input
+													type="email"
+													name="contact[email]"
+													id="ContactFooter-email"
+													class="input-group__field newsletter__input"
+													value=""
+													placeholder="Email address"
+													aria-label="Email address"
+													aria-required="true"
+													required
+													autocorrect="off"
+													autocapitalize="off"
+												/>
+												<span class="input-group__btn">
+													<button
+														type="submit"
+														class="btn newsletter__submit"
+														name="commit"
+														id="Subscribe"
+													>
+														<span class="newsletter__submit-text--large"
+															>Subscribe</span
+														>
+													</button>
+												</span>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr class="site-footer__hr" />
+					<div class="page-width">
+						<div
+							class="grid grid--no-gutters small--text-center grid--footer-float-right"
+						>
+							<div
+								class="grid__item small--hide one-half site-footer-item-center-vertically"
+							>
+								<div class="grid__item site-footer__payment-icons">
+									<span class="visually-hidden">Payment methods</span>
+									<ul class="payment-icons list--inline site-footer__icon-list">
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												viewBox="0 0 38 24"
+												xmlns="http://www.w3.org/2000/svg"
+												role="img"
+												width="38"
+												height="24"
+												aria-labelledby="pi-visa"
+											>
+												<title id="pi-visa">Visa</title>
+												<path
+													opacity=".07"
+													d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+												/>
+												<path
+													fill="#fff"
+													d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+												/>
+												<path
+													d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+													fill="#142688"
+												/>
+											</svg>
+										</li>
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												viewBox="0 0 38 24"
+												xmlns="http://www.w3.org/2000/svg"
+												role="img"
+												width="38"
+												height="24"
+												aria-labelledby="pi-master"
+											>
+												<title id="pi-master">Mastercard</title>
+												<path
+													opacity=".07"
+													d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+												/>
+												<path
+													fill="#fff"
+													d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+												/>
+												<circle fill="#EB001B" cx="15" cy="12" r="7" />
+												<circle fill="#F79E1B" cx="23" cy="12" r="7" />
+												<path
+													fill="#FF5F00"
+													d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"
+												/>
+											</svg>
+										</li>
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												xmlns="http://www.w3.org/2000/svg"
+												role="img"
+												viewBox="0 0 38 24"
+												width="38"
+												height="24"
+												aria-labelledby="pi-american_express"
+											>
+												<title id="pi-american_express">American Express</title>
+												<g fill="none">
+													<path
+														fill="#000"
+														d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z"
+														opacity=".07"
+													/>
+													<path
+														fill="#006FCF"
+														d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1"
+													/>
+													<path
+														fill="#FFF"
+														d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z"
+													/>
+												</g>
+											</svg>
+										</li>
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												viewBox="0 0 38 24"
+												xmlns="http://www.w3.org/2000/svg"
+												width="38"
+												height="24"
+												role="img"
+												aria-labelledby="pi-paypal"
+											>
+												<title id="pi-paypal">PayPal</title>
+												<path
+													opacity=".07"
+													d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+												/>
+												<path
+													fill="#fff"
+													d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+												/>
+												<path
+													fill="#003087"
+													d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"
+												/>
+												<path
+													fill="#3086C8"
+													d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"
+												/>
+												<path
+													fill="#012169"
+													d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"
+												/>
+											</svg>
+										</li>
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												viewBox="0 0 38 24"
+												xmlns="http://www.w3.org/2000/svg"
+												role="img"
+												width="38"
+												height="24"
+												aria-labelledby="pi-diners_club"
+											>
+												<title id="pi-diners_club">Diners Club</title>
+												<path
+													opacity=".07"
+													d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+												/>
+												<path
+													fill="#fff"
+													d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+												/>
+												<path
+													d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z"
+													fill="#3086C8"
+												/>
+											</svg>
+										</li>
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												xmlns="http://www.w3.org/2000/svg"
+												role="img"
+												viewBox="0 0 38 24"
+												width="38"
+												height="24"
+												aria-labelledby="pi-discover"
+											>
+												<title id="pi-discover">Discover</title>
+												<path
+													d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+													fill="#000"
+													opacity=".07"
+												/>
+												<path
+													d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+													fill="#FFF"
+												/>
+												<path
+													d="M37 16.95V21c0 1.1-.9 2-2 2H23.228c7.896-1.815 12.043-4.601 13.772-6.05z"
+													fill="#EDA024"
+												/>
+												<path fill="#494949" d="M9 11h20v2H9z" />
+												<path
+													d="M22 12c0 1.7-1.3 3-3 3s-3-1.4-3-3 1.4-3 3-3c1.7 0 3 1.3 3 3z"
+													fill="#EDA024"
+												/>
+											</svg>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div
+								class="grid__item one-half small--one-whole site-footer-item-tall"
+							>
+								<ul
+									class="list--inline site-footer__social-icons social-icons site-footer__icon-list"
+								>
+									<li class="social-icons__item">
+										<a
+											class="social-icons__link"
+											href="https://facebook.com/shopify"
+											aria-describedby="a11y-external-message"
+											><svg
+												aria-hidden="true"
+												focusable="false"
+												role="presentation"
+												class="icon icon-facebook"
+												viewBox="0 0 20 20"
+											>
+												<path
+													fill="#444"
+													d="M18.05.811q.439 0 .744.305t.305.744v16.637q0 .439-.305.744t-.744.305h-4.732v-7.221h2.415l.342-2.854h-2.757v-1.83q0-.659.293-1t1.073-.342h1.488V3.762q-.976-.098-2.171-.098-1.634 0-2.635.964t-1 2.72V9.47H7.951v2.854h2.415v7.221H1.413q-.439 0-.744-.305t-.305-.744V1.859q0-.439.305-.744T1.413.81H18.05z"
+												/></svg
+											><span class="icon__fallback-text">Facebook</span>
+										</a>
+									</li>
+									<li class="social-icons__item">
+										<a
+											class="social-icons__link"
+											href="https://twitter.com/shopify"
+											aria-describedby="a11y-external-message"
+											><svg
+												aria-hidden="true"
+												focusable="false"
+												role="presentation"
+												class="icon icon-twitter"
+												viewBox="0 0 20 20"
+											>
+												<path
+													fill="#444"
+													d="M19.551 4.208q-.815 1.202-1.956 2.038 0 .082.02.255t.02.255q0 1.589-.469 3.179t-1.426 3.036-2.272 2.567-3.158 1.793-3.963.672q-3.301 0-6.031-1.773.571.041.937.041 2.751 0 4.911-1.671-1.284-.02-2.292-.784T2.456 11.85q.346.082.754.082.55 0 1.039-.163-1.365-.285-2.262-1.365T1.09 7.918v-.041q.774.408 1.773.448-.795-.53-1.263-1.396t-.469-1.864q0-1.019.509-1.997 1.487 1.854 3.596 2.924T9.81 7.184q-.143-.509-.143-.897 0-1.63 1.161-2.781t2.832-1.151q.815 0 1.569.326t1.284.917q1.345-.265 2.506-.958-.428 1.386-1.732 2.18 1.243-.163 2.262-.611z"
+												/></svg
+											><span class="icon__fallback-text">Twitter</span>
+										</a>
+									</li>
+									<li class="social-icons__item">
+										<a
+											class="social-icons__link"
+											href="https://pinterest.com/shopify"
+											aria-describedby="a11y-external-message"
+											><svg
+												aria-hidden="true"
+												focusable="false"
+												role="presentation"
+												class="icon icon-pinterest"
+												viewBox="0 0 20 20"
+											>
+												<path
+													fill="#444"
+													d="M9.958.811q1.903 0 3.635.744t2.988 2 2 2.988.744 3.635q0 2.537-1.256 4.696t-3.415 3.415-4.696 1.256q-1.39 0-2.659-.366.707-1.147.951-2.025l.659-2.561q.244.463.903.817t1.39.354q1.464 0 2.622-.842t1.793-2.305.634-3.293q0-2.171-1.671-3.769t-4.257-1.598q-1.586 0-2.903.537T5.298 5.897 4.066 7.775t-.427 2.037q0 1.268.476 2.22t1.427 1.342q.171.073.293.012t.171-.232q.171-.61.195-.756.098-.268-.122-.512-.634-.707-.634-1.83 0-1.854 1.281-3.183t3.354-1.329q1.83 0 2.854 1t1.025 2.61q0 1.342-.366 2.476t-1.049 1.817-1.561.683q-.732 0-1.195-.537t-.293-1.269q.098-.342.256-.878t.268-.915.207-.817.098-.732q0-.61-.317-1t-.927-.39q-.756 0-1.269.695t-.512 1.744q0 .39.061.756t.134.537l.073.171q-1 4.342-1.22 5.098-.195.927-.146 2.171-2.513-1.122-4.062-3.44T.59 10.177q0-3.879 2.744-6.623T9.957.81z"
+												/></svg
+											><span class="icon__fallback-text">Pinterest</span>
+										</a>
+									</li>
+									<li class="social-icons__item">
+										<a
+											class="social-icons__link"
+											href="http://instagram.com/shopify"
+											aria-describedby="a11y-external-message"
+											><svg
+												aria-hidden="true"
+												focusable="false"
+												role="presentation"
+												class="icon icon-instagram"
+												viewBox="0 0 512 512"
+											>
+												<path
+													d="M256 49.5c67.3 0 75.2.3 101.8 1.5 24.6 1.1 37.9 5.2 46.8 8.7 11.8 4.6 20.2 10 29 18.8s14.3 17.2 18.8 29c3.4 8.9 7.6 22.2 8.7 46.8 1.2 26.6 1.5 34.5 1.5 101.8s-.3 75.2-1.5 101.8c-1.1 24.6-5.2 37.9-8.7 46.8-4.6 11.8-10 20.2-18.8 29s-17.2 14.3-29 18.8c-8.9 3.4-22.2 7.6-46.8 8.7-26.6 1.2-34.5 1.5-101.8 1.5s-75.2-.3-101.8-1.5c-24.6-1.1-37.9-5.2-46.8-8.7-11.8-4.6-20.2-10-29-18.8s-14.3-17.2-18.8-29c-3.4-8.9-7.6-22.2-8.7-46.8-1.2-26.6-1.5-34.5-1.5-101.8s.3-75.2 1.5-101.8c1.1-24.6 5.2-37.9 8.7-46.8 4.6-11.8 10-20.2 18.8-29s17.2-14.3 29-18.8c8.9-3.4 22.2-7.6 46.8-8.7 26.6-1.3 34.5-1.5 101.8-1.5m0-45.4c-68.4 0-77 .3-103.9 1.5C125.3 6.8 107 11.1 91 17.3c-16.6 6.4-30.6 15.1-44.6 29.1-14 14-22.6 28.1-29.1 44.6-6.2 16-10.5 34.3-11.7 61.2C4.4 179 4.1 187.6 4.1 256s.3 77 1.5 103.9c1.2 26.8 5.5 45.1 11.7 61.2 6.4 16.6 15.1 30.6 29.1 44.6 14 14 28.1 22.6 44.6 29.1 16 6.2 34.3 10.5 61.2 11.7 26.9 1.2 35.4 1.5 103.9 1.5s77-.3 103.9-1.5c26.8-1.2 45.1-5.5 61.2-11.7 16.6-6.4 30.6-15.1 44.6-29.1 14-14 22.6-28.1 29.1-44.6 6.2-16 10.5-34.3 11.7-61.2 1.2-26.9 1.5-35.4 1.5-103.9s-.3-77-1.5-103.9c-1.2-26.8-5.5-45.1-11.7-61.2-6.4-16.6-15.1-30.6-29.1-44.6-14-14-28.1-22.6-44.6-29.1-16-6.2-34.3-10.5-61.2-11.7-27-1.1-35.6-1.4-104-1.4z"
+												/>
+												<path
+													d="M256 126.6c-71.4 0-129.4 57.9-129.4 129.4s58 129.4 129.4 129.4 129.4-58 129.4-129.4-58-129.4-129.4-129.4zm0 213.4c-46.4 0-84-37.6-84-84s37.6-84 84-84 84 37.6 84 84-37.6 84-84 84z"
+												/>
+												<circle cx="390.5" cy="121.5" r="30.2" /></svg
+											><span class="icon__fallback-text">Instagram</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="grid__item medium-up--hide one-half small--one-whole">
+								<div class="grid__item site-footer__payment-icons">
+									<span class="visually-hidden">Payment methods</span>
+									<ul class="payment-icons list--inline site-footer__icon-list">
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												viewBox="0 0 38 24"
+												xmlns="http://www.w3.org/2000/svg"
+												role="img"
+												width="38"
+												height="24"
+												aria-labelledby="pi-visa"
+											>
+												<title id="pi-visa">Visa</title>
+												<path
+													opacity=".07"
+													d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+												/>
+												<path
+													fill="#fff"
+													d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+												/>
+												<path
+													d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+													fill="#142688"
+												/>
+											</svg>
+										</li>
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												viewBox="0 0 38 24"
+												xmlns="http://www.w3.org/2000/svg"
+												role="img"
+												width="38"
+												height="24"
+												aria-labelledby="pi-master"
+											>
+												<title id="pi-master">Mastercard</title>
+												<path
+													opacity=".07"
+													d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+												/>
+												<path
+													fill="#fff"
+													d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+												/>
+												<circle fill="#EB001B" cx="15" cy="12" r="7" />
+												<circle fill="#F79E1B" cx="23" cy="12" r="7" />
+												<path
+													fill="#FF5F00"
+													d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"
+												/>
+											</svg>
+										</li>
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												xmlns="http://www.w3.org/2000/svg"
+												role="img"
+												viewBox="0 0 38 24"
+												width="38"
+												height="24"
+												aria-labelledby="pi-american_express"
+											>
+												<title id="pi-american_express">American Express</title>
+												<g fill="none">
+													<path
+														fill="#000"
+														d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z"
+														opacity=".07"
+													/>
+													<path
+														fill="#006FCF"
+														d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1"
+													/>
+													<path
+														fill="#FFF"
+														d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z"
+													/>
+												</g>
+											</svg>
+										</li>
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												viewBox="0 0 38 24"
+												xmlns="http://www.w3.org/2000/svg"
+												width="38"
+												height="24"
+												role="img"
+												aria-labelledby="pi-paypal"
+											>
+												<title id="pi-paypal">PayPal</title>
+												<path
+													opacity=".07"
+													d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+												/>
+												<path
+													fill="#fff"
+													d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+												/>
+												<path
+													fill="#003087"
+													d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"
+												/>
+												<path
+													fill="#3086C8"
+													d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"
+												/>
+												<path
+													fill="#012169"
+													d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"
+												/>
+											</svg>
+										</li>
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												viewBox="0 0 38 24"
+												xmlns="http://www.w3.org/2000/svg"
+												role="img"
+												width="38"
+												height="24"
+												aria-labelledby="pi-diners_club"
+											>
+												<title id="pi-diners_club">Diners Club</title>
+												<path
+													opacity=".07"
+													d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+												/>
+												<path
+													fill="#fff"
+													d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+												/>
+												<path
+													d="M12 12v3.7c0 .3-.2.3-.5.2-1.9-.8-3-3.3-2.3-5.4.4-1.1 1.2-2 2.3-2.4.4-.2.5-.1.5.2V12zm2 0V8.3c0-.3 0-.3.3-.2 2.1.8 3.2 3.3 2.4 5.4-.4 1.1-1.2 2-2.3 2.4-.4.2-.4.1-.4-.2V12zm7.2-7H13c3.8 0 6.8 3.1 6.8 7s-3 7-6.8 7h8.2c3.8 0 6.8-3.1 6.8-7s-3-7-6.8-7z"
+													fill="#3086C8"
+												/>
+											</svg>
+										</li>
+										<li class="payment-icon">
+											<svg
+												class="icon icon--full-color"
+												xmlns="http://www.w3.org/2000/svg"
+												role="img"
+												viewBox="0 0 38 24"
+												width="38"
+												height="24"
+												aria-labelledby="pi-discover"
+											>
+												<title id="pi-discover">Discover</title>
+												<path
+													d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+													fill="#000"
+													opacity=".07"
+												/>
+												<path
+													d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+													fill="#FFF"
+												/>
+												<path
+													d="M37 16.95V21c0 1.1-.9 2-2 2H23.228c7.896-1.815 12.043-4.601 13.772-6.05z"
+													fill="#EDA024"
+												/>
+												<path fill="#494949" d="M9 11h20v2H9z" />
+												<path
+													d="M22 12c0 1.7-1.3 3-3 3s-3-1.4-3-3 1.4-3 3-3c1.7 0 3 1.3 3 3z"
+													fill="#EDA024"
+												/>
+											</svg>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div
+								class="grid__item small--one-whole site-footer-item-align-right"
+							>
+								<small class="site-footer__copyright-content"
+									>&copy; 2020,
+									<a href="/" title="">debut-theme-lightroom</a></small
+								>
+								<small
+									class="site-footer__copyright-content site-footer__copyright-content--powered-by"
+									><a
+										target="_blank"
+										rel="nofollow"
+										href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore"
+										>Powered by Shopify</a
+									></small
+								>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+			<div id="slideshow-info" class="visually-hidden" aria-hidden="true">
+				Use left/right arrows to navigate the slideshow or swipe left/right if
+				using a mobile device
+			</div>
+		</div>
+
+		<ul hidden>
+			<li id="a11y-refresh-page-message">
+				Choosing a selection results in a full page refresh.
+			</li>
+			<li id="a11y-selection-message">
+				Press the space key then arrow keys to make a selection.
+			</li>
+		</ul>
+	</body>
+</html>
