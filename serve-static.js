@@ -7,7 +7,9 @@ const port = 8181
 // Hors TP: serveur de fichiers statiques
 app.get('/', (req, res) => res.sendFile('./index.html', { root: './' }))
 app.use('/demos', express.static('demos/'))
-app.use('/tp', express.static('tp-ecommerce/'))
+app.use('/demos', express.static('demos/'))
+app.use('/tp-ecommerce', express.static('tp-ecommerce/'))
+
 app.use(favicon(__dirname + '/rocket.png'))
 
 // 3. on allume la compression pour tous les fichiers texte
@@ -21,7 +23,7 @@ app.use(require('compression')(/*{level:9}*/)) // les taux de compression élev�
 // fonts.gstatic.com
 
 app.use(
-	express.static('tp/', {
+	express.static('tp-ecommerce/', {
 		lastModified: true,
 		etag: true,
 		// 4. démo de pré-connection à un domaine que le navigateur ne peut pas deviner juste en lisant le HTML
@@ -38,9 +40,9 @@ app.use(
 		},
 	})
 )
-// 1. on met un cache client d'un an pour toutes les requêtes
+// 1. on met un cache client d'un an pour toutes les requêtes vers des statiques
 app.use(
-	express.static('tp/', {
+	express.static('tp-ecommerce/assets', {
 		maxAge: '1y', // = 1 an
 	})
 )
