@@ -2,55 +2,43 @@
 	font-family: Muli;
 	font-weight: 600;
 	font-style: normal;
-	src: url('./fonts/muli_n6.woff2')
-			format('woff2'),
-		url('./fonts/muli_n6.woff')
-			format('woff');
+	src: url('./fonts/muli_n6.woff') format('woff');
+	font-display: block;
 }
 @font-face {
 	font-family: Muli;
 	font-weight: 400;
 	font-style: normal;
-	src: url('./fonts/muli_n4.woff2')
-			format('woff2'),
-		url('./fonts/muli_n4.woff')
-			format('woff');
+	src: url('./fonts/muli_n4.woff') format('woff');
+	font-display: block;
 }
 @font-face {
 	font-family: Muli;
 	font-weight: 700;
 	font-style: normal;
-	src: url('./fonts/muli_n7.woff2')
-			format('woff2'),
-		url('./fonts/muli_n7.woff')
-			format('woff');
+	src: url('./fonts/muli_n7.woff') format('woff');
+	font-display: block;
 }
 @font-face {
 	font-family: Muli;
 	font-weight: 700;
 	font-style: normal;
-	src: url('./fonts/muli_n7.woff2')
-			format('woff2'),
-		url('./fonts/muli_n7.woff')
-			format('woff');
+	src: url('./fonts/muli_n7.woff') format('woff');
+	font-display: block;
 }
 @font-face {
 	font-family: Muli;
 	font-weight: 400;
 	font-style: italic;
-	src: url('./fonts/muli_i4.woff2')
-			format('woff2'),
-		url('./fonts/muli_i4.woff')
-			format('woff');
+	src: url('./fonts/muli_i4.woff') format('woff');
+	font-display: block;
 }
 @font-face {
 	font-family: Muli;
 	font-weight: 700;
 	font-style: italic;
-	src: url('./fonts/muli_i7.woff2')
-			format('woff2'),
-		url('./fonts/muli_i7.woff')
-			format('woff');
+	src: url('./fonts/muli_i7.woff') format('woff');
+	font-display: block;
 }
 .slick-slider {
 	position: relative;
