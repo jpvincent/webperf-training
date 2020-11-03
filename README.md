@@ -12,7 +12,7 @@ Démos et code du TP de la formation Webperf.
 
 # Tester
 
-Publier sur un serveur de fichier statique ([Netlify](https://app.netlify.com/signup) est recommandé pour sa simplicité), avec une URL publique. Ex: https://formation-webperf.netlify.app/tp-ecommerce/
+Publier sur un serveur de fichier statique ([Netlify](https://app.netlify.com/signup) est recommandé pour sa simplicité), avec une URL publique (Ex: https://formation-webperf.netlify.app/tp-ecommerce/), puis utiliser des outils comme Webpagetest pour voir les effets.
 
 # Pré-requis
 
