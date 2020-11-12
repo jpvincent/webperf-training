@@ -1,5 +1,8 @@
+// import loadable from '@loadable/component'
 import DatePicker from './component/date-picker.js'
+
 import Autocomplete from './component/autocomplete.js'
+
 import React from 'react'
 
 import ReactDOM from 'react-dom'

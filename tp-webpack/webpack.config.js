@@ -8,7 +8,7 @@ const dirTpWebpack = path.resolve(__dirname)
 const dirTpEcommerce = path.resolve(__dirname, '..', 'tp-ecommerce')
 
 module.exports = {
-	entry: path.resolve(dirTpWebpack, 'app/app.js'),
+	entry: { app: path.resolve(dirTpWebpack, 'app/app.js') },
 	mode: 'production', // mode par défaut. Autre valeur : 'development'
 	devtool: 'source-map', // important pour s'aider au debug
 	resolve: {
@@ -19,8 +19,9 @@ module.exports = {
 		},
 	},
 	output: {
-		filename: 'app.js',
+		filename: '[name].js',
 		path: path.resolve(dirTpWebpack, 'build'),
+		publicPath: '/tp-webpack/build/',
 	},
 	module: {
 		rules: [
