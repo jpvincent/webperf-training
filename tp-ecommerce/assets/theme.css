@@ -6670,7 +6670,6 @@ hr {
 	padding: 35px;
 	width: 100%;
 	text-align: center;
-	z-index: 3;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;

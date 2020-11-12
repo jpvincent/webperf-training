@@ -7,8 +7,8 @@ const port = 8181
 // Hors TP: serveur de fichiers statiques
 app.get('/', (req, res) => res.sendFile('./index.html', { root: './' }))
 app.use('/demos', express.static('demos/'))
-app.use('/demos', express.static('demos/'))
 app.use('/tp-ecommerce', express.static('tp-ecommerce/'))
+app.use('/tp-webpack', express.static('tp-webpack/'))
 
 app.use(favicon(__dirname + '/rocket.png'))
 

@@ -9,6 +9,15 @@ const dirTpEcommerce = path.resolve(__dirname, '..', 'tp-ecommerce')
 
 module.exports = {
 	entry: path.resolve(dirTpWebpack, 'app/app.js'),
+	mode: 'production', // mode par défaut. Autre valeur : 'development'
+	devtool: 'source-map', // important pour s'aider au debug
+	resolve: {
+		// profiling React (https://gist.github.com/bvaughn/25e6233aeb1b4f0cdb8d8366e54a3977)
+		alias: {
+			'react-dom': 'react-dom/profiling',
+			'scheduler/tracing': 'scheduler/tracing-profiling',
+		},
+	},
 	output: {
 		filename: 'app.js',
 		path: path.resolve(dirTpWebpack, 'build'),
@@ -21,7 +30,10 @@ module.exports = {
 				loader: 'babel-loader',
 				options: {
 					presets: ['@babel/env', '@babel/preset-react'],
-					plugins: ['@babel/plugin-transform-react-jsx'],
+					plugins: [
+						'@babel/plugin-transform-react-jsx',
+						'@babel/plugin-proposal-class-properties',
+					],
 				},
 			},
 			{
