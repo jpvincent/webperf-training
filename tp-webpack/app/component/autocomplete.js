@@ -120,6 +120,7 @@ export default class Autocomplete extends React.Component {
 			placeholder: "Type 'c'",
 			value,
 			onChange: this.onChange,
+			autofocus: 'autofocus',
 		}
 
 		return (

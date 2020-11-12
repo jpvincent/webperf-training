@@ -13,11 +13,43 @@ import React from 'react'
 
 import ReactDOM from 'react-dom'
 
+class App extends React.Component {
+	constructor() {
+		super()
+		this.state = { isActivated: false }
+	}
+	activate() {
+		this.setState(() => ({
+			isActivated: true,
+		}))
+	}
+
+	fakeAutocomplete() {
+		return (
+			<div role='combobox' className='react-autosuggest__container'>
+				<input
+					type='text'
+					className='react-autosuggest__input'
+					placeholder="Type 'c'"
+					value=''
+					onFocus={this.activate.bind(this)}
+				/>
+			</div>
+		)
+	}
+
+	render() {
+		return (
+			<>
+				<DatePicker />
+				<h4 className='h3'>Then pick a language</h4>
+				{!this.state.isActivated ? this.fakeAutocomplete() : <Autocomplete />}
+			</>
+		)
+	}
+}
+
 ReactDOM.render(
-	<>
-		<DatePicker />
-		<h4 className='h3'>Then pick a language</h4>
-		<Autocomplete />
-	</>,
+	<App />,
 	globalThis.document.getElementById('application-date-picker')
 )
