@@ -11,7 +11,7 @@ const Autocomplete = loadable(() =>
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+// à utiliser autour datepicker, 2nd exemple de la doc https://github.com/joshwnj/react-visibility-sensor
 import VisibilitySensor from 'react-visibility-sensor/visibility-sensor'
 
 class App extends React.Component {
@@ -44,14 +44,9 @@ class App extends React.Component {
 	render() {
 		return (
 			<>
-				<VisibilitySensor>
-					{({ isVisible }) => {
-						console.log('visibility : ', isVisible)
-						return !isVisible ? <div>Rien</div> : <DatePicker />
-					}}
-				</VisibilitySensor>
+				<DatePicker />
 				<h4 className='h3'>Then pick a language</h4>
-				{!this.state.isActivated ? this.fakeAutocomplete() : <Autocomplete />}
+				<Autocomplete />
 			</>
 		)
 	}
