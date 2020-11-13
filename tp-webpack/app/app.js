@@ -10,12 +10,14 @@ const Autocomplete = loadable(() =>
 )
 
 import React from 'react'
-
 import ReactDOM from 'react-dom'
+
+import VisibilitySensor from 'react-visibility-sensor/visibility-sensor'
 
 class App extends React.Component {
 	constructor() {
 		super()
+		// isActivated nous servira à savoir si l'utilisateur a envie d'interagir avec l'autocomplete
 		this.state = { isActivated: false }
 	}
 	activate() {
@@ -23,7 +25,8 @@ class App extends React.Component {
 			isActivated: true,
 		}))
 	}
-
+	// Génère un bout de HTML statique qui ressemble au composant final.
+	// Au focus dans ce champs this.state.isActivated passe à true
 	fakeAutocomplete() {
 		return (
 			<div role='combobox' className='react-autosuggest__container'>
@@ -41,7 +44,12 @@ class App extends React.Component {
 	render() {
 		return (
 			<>
-				<DatePicker />
+				<VisibilitySensor>
+					{({ isVisible }) => {
+						console.log('visibility : ', isVisible)
+						return !isVisible ? <div>Rien</div> : <DatePicker />
+					}}
+				</VisibilitySensor>
 				<h4 className='h3'>Then pick a language</h4>
 				{!this.state.isActivated ? this.fakeAutocomplete() : <Autocomplete />}
 			</>
