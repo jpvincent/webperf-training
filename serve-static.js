@@ -14,11 +14,13 @@ app.use(favicon(__dirname + '/rocket.png'))
 
 // 3. on allume la compression pour tous les fichiers texte
 app.use(require('compression')(/*{level:9}*/)) // les taux de compression élevés posent des problèmes aux machines faibles
-/*app.use(require('shrink-ray')({
-  brotli: {
-    quality: 14
-  }
-}))*/
+app.use(
+	require('shrink-ray-current')({
+		brotli: {
+			quality: 14,
+		},
+	})
+)
 
 // fonts.gstatic.com
 
