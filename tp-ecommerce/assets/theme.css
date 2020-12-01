@@ -554,9 +554,6 @@ textarea {
 	text-align: center !important;
 }
 
-
-
-
 .clearfix {
 	*zoom: 1;
 }
@@ -874,7 +871,6 @@ li {
 .mega-title--large {
 	font-size: 1.88889em;
 }
-
 
 .mega-subtitle p {
 	color: #fff;
@@ -2139,8 +2135,6 @@ hr {
 	margin-bottom: -35px;
 }
 
-
-
 .placeholder-svg {
 	display: block;
 	fill: rgba(109, 109, 109, 0.35);
@@ -2476,7 +2470,6 @@ hr {
 .zoomImg {
 	background-color: #f8f8f8;
 }
-
 
 .product-single__photos--full {
 	margin-bottom: 30px;
@@ -2938,7 +2931,6 @@ hr {
 	position: relative;
 	background-color: #f8f8f8;
 }
-
 
 .site-header__logo {
 	margin: 15px 0;
@@ -3609,8 +3601,6 @@ hr {
 	width: 100%;
 }
 
-
-
 .search-page-form .predictive-search-wrapper {
 	max-height: 60vh;
 }
@@ -4105,7 +4095,6 @@ hr {
 	display: none;
 }
 
-
 .slideshow__text-wrap--desktop .slideshow__text-content {
 	position: absolute;
 	width: 100%;
@@ -4164,7 +4153,6 @@ hr {
 .slideshow__arrows--mobile ~ .slideshow__text-content--mobile {
 	padding-top: 1.7rem;
 }
-
 
 .slideshow__title,
 .slideshow__subtitle {
@@ -4225,7 +4213,6 @@ hr {
 		background-color 0.2s cubic-bezier(0.44, 0.13, 0.48, 0.87);
 	display: none;
 }
-
 
 .slideshow__arrows .slideshow__arrow {
 	height: 44px;
@@ -4609,7 +4596,6 @@ hr {
 	flex-wrap: wrap;
 }
 
-
 .site-footer__item {
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -4629,8 +4615,6 @@ hr {
 	padding-right: 0;
 }
 
-
-
 .site-footer__item-inner--newsletter {
 	width: 100%;
 }
@@ -4642,11 +4626,9 @@ hr {
 	width: 100%;
 }
 
-
 .site-footer__hr {
 	margin: 55px 0 30px 0;
 }
-
 
 .site-footer__linklist-item {
 	display: block;
@@ -4659,7 +4641,6 @@ hr {
 .site-footer__icon-list {
 	padding-bottom: 30px;
 }
-
 
 .social-icons__item {
 	padding: 0 15px;
@@ -4728,8 +4709,6 @@ hr {
 	padding-top: 35px;
 	padding-bottom: 35px;
 }
-
-
 
 .hero {
 	position: relative;
@@ -4955,13 +4934,9 @@ hr {
 		-moz-flex-basis: 50%;
 		flex-basis: 50%;
 	}
-}
-@media only screen and (min-width: 990px) {
-	.map-section__content-wrapper {
-		-ms-flex-preferred-size: 33%;
-		-webkit-flex-basis: 33%;
-		-moz-flex-basis: 33%;
-		flex-basis: 33%;
+	.slideshow {
+		position: relative;
+		max-height: 100vh;
 	}
 }
 .map-section__content {
@@ -5350,7 +5325,6 @@ hr {
 	height: 100%;
 }
 
-
 .video-section-wrapper--small.video-section-wrapper--min-height {
 	min-height: 175px;
 }
@@ -5723,4 +5697,3 @@ hr {
 	padding-bottom: 15px;
 	margin: 0 5px;
 }
-
