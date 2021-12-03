@@ -52,14 +52,34 @@
 		var hardCompute = function() {
 			// variables that affect the loop
 			var iterations = $('#iterations'),
-				now = + new Date();
+				now = Date.now();
 			// too long loop, harass the DOM
 			for(i = 0; i < 100000; i++) {
 				iterations.html(i+' iterations');
 			}
 			// code that depends on the end of the loop ( use of i )
-			iterations.html(i +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+			iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
 		};
+
+		var deferWithPromises = function() {
+			// variables that affect the loop
+			var iterations = $('#iterations-promises'),
+				now = Date.now();
+
+				// is a Promise async ? from the user point of view ?
+			let compute = new Promise((resolve, reject) => {
+				// too long loop, harass the DOM
+				for(i = 0; i < 100000; i++) {
+					iterations.html(i+' iterations');
+				}
+				resolve(i)
+			})
+
+			compute.then((i) => {
+							// code that depends on the end of the loop ( use of i )
+				iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
+			})
+		}
 
 		// the way you should do it (universal)
 		var deferWithNaiveSetTimeout = function() {
@@ -76,7 +96,7 @@
 					return i++; // TRICK 4 : stop the loop here
 				}
 				// TRICK 6 : if code depends on the loop, it has to be moved inside the new function
-				iterations.html(i +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+				iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
 			}()); // TRICK 1 : scope created, auto-execute
 		};
 
@@ -85,24 +105,24 @@
 			// variables that affect the loop
 			var iterations = $('#iterations-settimeout'),
 				i = 0,
-				now = + new Date();
+				now = Date.now();
 
 			// create a function that will execute both the loop and the dependant code
 			(function mainLoop() { // TRICK 1 : create a new scope, give a name to this method
 				// time marker
-				var lastStart = + new Date(); // TRICK 2 : mark the start time, to know when to break. It could also depend on another metric (number of iterations perhaps), but time is best for user-perceived performance
+				var lastStart = Date.now(); // TRICK 2 : mark the start time, to know when to break. It could also depend on another metric (number of iterations perhaps), but time is best for user-perceived performance
 				// too long loop, harass the DOM
 				for(	// TRICK 3 : never reset i, it's already 0 outside of this scope
 					; i < 100000; i++) {
 					iterations.html(i+' iterations');
-					if( ((+ new Date()) - lastStart) > 16 ) // TRICK 4 : more than 50ms in this for() ? break that. Depending on your code, you could prefer other metrics like the number of iterations
+					if( ((Date.now()) - lastStart) > 16 ) // TRICK 4 : more than 50ms in this for() ? break that. Depending on your code, you could prefer other metrics like the number of iterations
 					{
 						setTimeout(mainLoop, 0); // TRICK 5 : setTimeout() will continue the loop once Javascript and the browser have free time
 						return; // TRICK 4 : stop the loop here
 					}
 				}
 				// TRICK 6 : if code depends on the loop, it has to be moved inside the new function
-				iterations.html(i +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+				iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
 			}()); // TRICK 1 : scope created, auto-execute
 		};
 
@@ -110,21 +130,21 @@
 		var deferWithSetImmediate = function() {
 			var iterations = $('#iterations-setimmediate'),
 				i = 0,
-				now = + new Date();
+				now = Date.now();
 
 			(function mainLoop() {
-				var lastStart = + new Date();
+				var lastStart = Date.now();
 				for(
 					; i < 100000; i++)
 					{
 					iterations.html(i+' iterations');
 
-					if( ((+ new Date()) - lastStart) > 10 ) {
+					if( ((Date.now()) - lastStart) > 10 ) {
 						setImmediate(mainLoop);
 						return;
 					}
 				}
-				iterations.html(i +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+				iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
 			}());
 		};
 
@@ -136,7 +156,7 @@
 
 			var iterations = $('#iterations-raf'),
 				i = 0,
-				now = + new Date();
+				now = Date.now();
 
 			(function mainLoop() {
 				// that's muuuuuuch more slower. Indeed requestAnimationFrame() is called every time the browser is ABOUT TO PAINT something. So dont use it for JS computation but rather for DOM mutation
@@ -146,7 +166,7 @@
 					i++;
 				} else {
 					// code "métier" final
-					iterations.html(i +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+					iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
 				}
 			}());
 		};
@@ -177,12 +197,12 @@
 
 		var deferWithSplitCompute = function () {
 			var iterations = $('#iterations-split'),
-			now = + new Date();
+			now = Date.now();
 
 			/*splitCompute( 100000, function fEach(i) {
 				iterations.html(i+' iterations');
 			}, function fCallback() {
-				iterations.html(100000 +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+				iterations.html(100000 +' iterations made in '+ ( (Date.now()) - now)+'ms');
 			} );
 			*/
 			optimizedFor({
@@ -191,7 +211,7 @@
 					iterations.html(i+' iterations');
 				},
 				end:function fCallback() {
-					iterations.html(100000 +' iterations made in '+ ( (+ new Date()) - now)+'ms');
+					iterations.html(100000 +' iterations made in '+ ( (Date.now()) - now)+'ms');
 				}
 			});
 		};
@@ -286,6 +306,11 @@
 	<div>
 		<button id="run-computation" onclick="hardCompute()">Regular blocking loop</button>
 		<span id="iterations">Iterations</span>
+	</div>
+
+	<div>
+		<button id="run-promises" onclick="deferWithPromises()">With Promises</button>
+		<span id="iterations-promises">Iterations</span>
 	</div>
 
 	<div>
