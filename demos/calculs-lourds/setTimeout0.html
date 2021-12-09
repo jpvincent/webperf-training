@@ -5,7 +5,6 @@
 		SetTimeout(0) technique demo
 	</title>
 	<script src="jquery-1.7.2.min.js"></script>
-	<script src="setImmediate.js"></script>
 	<style>
 		#animate-me {
 			width:50px;
@@ -51,59 +50,59 @@
 		// the classical way
 		var hardCompute = function() {
 			// variables that affect the loop
-			var iterations = $('#iterations'),
+			var iterations = document.getElementById('iterations'),
 				now = Date.now();
 			// too long loop, harass the DOM
-			for(i = 0; i < 100000; i++) {
-				iterations.html(i+' iterations');
+			for(i = 0; i < 1000000; i++) {
+				iterations.innerText =i+' iterations';
 			}
 			// code that depends on the end of the loop ( use of i )
-			iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
+			iterations.innerText =i +' iterations made in '+ ( (Date.now()) - now)+'ms';
 		};
 
 		var deferWithPromises = function() {
 			// variables that affect the loop
-			var iterations = $('#iterations-promises'),
+			var iterations = document.getElementById('iterations-promises'),
 				now = Date.now();
 
 				// is a Promise async ? from the user point of view ?
 			let compute = new Promise((resolve, reject) => {
 				// too long loop, harass the DOM
-				for(i = 0; i < 100000; i++) {
-					iterations.html(i+' iterations');
+				for(i = 0; i < 1000000; i++) {
+					iterations.innerText =i+' iterations';
 				}
 				resolve(i)
 			})
 
 			compute.then((i) => {
 							// code that depends on the end of the loop ( use of i )
-				iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
+				iterations.innerText =i +' iterations made in '+ ( (Date.now()) - now)+'ms';
 			})
 		}
 
 		// the way you should do it (universal)
 		var deferWithNaiveSetTimeout = function() {
 			// variables that affect the loop
-			var iterations = $('#iterations-naive-settimeout'),
+			var iterations = document.getElementById('iterations-naive-settimeout'),
 				i = 0;
 
 			// create a function that will execute both the loop and the dependant code
 			(function mainLoop() { // TRICK 1 : create a new scope, give a name to
 				for(	// TRICK 3 : never reset i, it's already 0 outside of this scope
-					; i < 100000; i++) {
-					iterations.html(i+' iterations');
+					; i < 1000000; i++) {
+					iterations.innerText =i+' iterations';
 					setTimeout(mainLoop, 0);
 					return i++; // TRICK 4 : stop the loop here
 				}
 				// TRICK 6 : if code depends on the loop, it has to be moved inside the new function
-				iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
+				iterations.innerText =i +' iterations made in '+ ( (Date.now()) - now)+'ms';
 			}()); // TRICK 1 : scope created, auto-execute
 		};
 
 		// the way you should do it (universal)
 		var deferWithSetTimeout = function() {
 			// variables that affect the loop
-			var iterations = $('#iterations-settimeout'),
+			var iterations = document.getElementById('iterations-settimeout'),
 				i = 0,
 				now = Date.now();
 
@@ -113,8 +112,8 @@
 				var lastStart = Date.now(); // TRICK 2 : mark the start time, to know when to break. It could also depend on another metric (number of iterations perhaps), but time is best for user-perceived performance
 				// too long loop, harass the DOM
 				for(	// TRICK 3 : never reset i, it's already 0 outside of this scope
-					; i < 100000; i++) {
-					iterations.html(i+' iterations');
+					; i < 1000000; i++) {
+					iterations.innerText =i+' iterations';
 					if( ((Date.now()) - lastStart) > 16 ) // TRICK 4 : more than 50ms in this for() ? break that. Depending on your code, you could prefer other metrics like the number of iterations
 					{
 						setTimeout(mainLoop, 0); // TRICK 5 : setTimeout() will continue the loop once Javascript and the browser have free time
@@ -122,29 +121,29 @@
 					}
 				}
 				// TRICK 6 : if code depends on the loop, it has to be moved inside the new function
-				iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
+				iterations.innerText =i +' iterations made in '+ ( (Date.now()) - now)+'ms';
 			}()); // TRICK 1 : scope created, auto-execute
 		};
 
 		// the ideal way (but works only on IE10+) https://ie.microsoft.com/testdrive/Performance/setImmediateSorting/Default.html
 		var deferWithSetImmediate = function() {
-			var iterations = $('#iterations-setimmediate'),
+			var iterations = document.getElementById('iterations-setimmediate'),
 				i = 0,
 				now = Date.now();
 
 			(function mainLoop() {
 				var lastStart = Date.now();
 				for(
-					; i < 100000; i++)
+					; i < 1000000; i++)
 					{
-					iterations.html(i+' iterations');
+					iterations.innerText =i+' iterations';
 
 					if( ((Date.now()) - lastStart) > 10 ) {
 						setImmediate(mainLoop);
 						return;
 					}
 				}
-				iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
+				iterations.innerText =i +' iterations made in '+ ( (Date.now()) - now)+'ms';
 			}());
 		};
 
@@ -154,19 +153,19 @@
 			if(!'requestAnimationFrame' in window)
 				return alert('requestAnimationFrame non supporté');
 
-			var iterations = $('#iterations-raf'),
+			var iterations = document.getElementById('iterations-raf'),
 				i = 0,
 				now = Date.now();
 
 			(function mainLoop() {
 				// that's muuuuuuch more slower. Indeed requestAnimationFrame() is called every time the browser is ABOUT TO PAINT something. So dont use it for JS computation but rather for DOM mutation
 				if( i < 1000) {
-					iterations.html(i+' iterations');
+					iterations.innerText =i+' iterations';
 					requestAnimationFrame(mainLoop);
 					i++;
 				} else {
 					// code "métier" final
-					iterations.html(i +' iterations made in '+ ( (Date.now()) - now)+'ms');
+					iterations.innerText =i +' iterations made in '+ ( (Date.now()) - now)+'ms';
 				}
 			}());
 		};
@@ -180,7 +179,7 @@
 			// TRICK 2 : the other code does not have access to the main page
 			// so both scripts communicate by string messages
 			worker.onmessage = function( event ) {
-				$('#iterations-workers').html( event.data );
+				document.getElementById('iterations-workers').innerText = ( event.data );
 			};
 
 			// just in case …
@@ -196,26 +195,50 @@
 
 
 		var deferWithSplitCompute = function () {
-			var iterations = $('#iterations-split'),
+			var iterations = document.getElementById('iterations-split'),
 			now = Date.now();
 
 			/*splitCompute( 100000, function fEach(i) {
-				iterations.html(i+' iterations');
+				iterations.innerText =i+' iterations';
 			}, function fCallback() {
-				iterations.html(100000 +' iterations made in '+ ( (Date.now()) - now)+'ms');
+				iterations.innerText =100000 +' iterations made in '+ ( (Date.now()) - now)+'ms';
 			} );
 			*/
 			optimizedFor({
-				nbIterations:100000,
+				nbIterations:1000000,
 				each: function fEach(i) {
-					iterations.html(i+' iterations');
+					iterations.innerText =i+' iterations';
 				},
 				end:function fCallback() {
-					iterations.html(100000 +' iterations made in '+ ( (Date.now()) - now)+'ms');
+					iterations.innerText =1000000 +' iterations made in '+ ( (Date.now()) - now)+'ms';
 				}
 			});
 		};
 
+		function deferWithisInputPending() {
+			if(!navigator.scheduling?.isInputPending)
+				alert('isInputPending is not supported on this browser')
+
+				// https://github.com/WICG/is-input-pending , https://web.dev/isinputpending/
+			console.log(navigator.scheduling.isInputPending({includeContinuous: true})) // renvoie également true lors des events continus du genre mousemove (notre démo sera plus parlante, il suffit de bouger la souris pour ralentir la boucle)
+
+			var iterations = document.getElementById('iterations-input-pending'),
+				now = Date.now()
+				, i=0;
+
+			(function mainLoop() {
+				for( ; i < 1000000; i++) {
+					if(navigator.scheduling.isInputPending({includeContinuous: true})) {
+						iterations.innerText =i+' iterations';
+						setTimeout(mainLoop, 0);
+						return i++; // TRICK 4 : stop the loop here
+					}
+				}
+				// TRICK 6 : if code depends on the loop, it has to be moved inside the new function
+				iterations.innerText =i +' iterations made in '+ ( (Date.now()) - now)+'ms';
+			}()); // TRICK 1 : scope created, auto-execute
+
+		}
 
 /**
 * NEVER BLOCKING LOOP : implementation of the infamous setTimeout 0 hack, with time checking in order to guarantee fluidity without sacrificing execution speed.
@@ -304,47 +327,47 @@
 </head>
 <body>
 	<div>
-		<button id="run-computation" onclick="hardCompute()">Regular blocking loop</button>
+		<button onclick="hardCompute()">Regular <code>for()</code> loop</button>
 		<span id="iterations">Iterations</span>
 	</div>
 
 	<div>
-		<button id="run-promises" onclick="deferWithPromises()">With Promises</button>
-		<span id="iterations-promises">Iterations</span>
-	</div>
-
-	<div>
-		<button id="run-computation" onclick="deferWithNaiveSetTimeout()">Loop smoothed with naive setTimeout</button>
+		<button onclick="deferWithNaiveSetTimeout()">Break loop with <code>setTimeout</code> (every time)</button>
 		<span id="iterations-naive-settimeout">Iterations</span>
 	</div>
 
+	<div>
+		<button id="run-promises" onclick="deferWithPromises()">Break loop With Promises</button>
+		<span id="iterations-promises">Iterations</span>
+	</div>
+
 
 	<div>
-		<button id="run-computation" onclick="deferWithSetTimeout()">Loop smoothed with setTimeout</button>
+		<button onclick="deferWithSetTimeout()">Break loop with <code>setTimeout</code> (every 16ms)</button>
 		<span id="iterations-settimeout">Iterations</span>
 	</div>
 
 	<div>
-		<button id="run-computation" onclick="deferWithSetImmediate()">Loop smoothed with setImmediate</button>
-		<span id="iterations-setimmediate">Iterations</span>
-	</div>
-
-	<div>
-		<button id="run-computation" onclick="deferWithRAF()">Loop smoothed with requestAnimationFrame</button>
+		<button onclick="deferWithRAF()">Loop managed by <code>requestAnimationFrame()</code></button>
 		<span id="iterations-raf">Iterations</span>
 	</div>
 
 	<div>
-		<button id="run-computation" onclick="deferWithWorkers()">Loop smoothed by Web Workers</button>
+		<button onclick="deferWithWorkers()">Loop executed in Web Workers</button>
 		<span id="iterations-workers">Iterations</span>
 	</div>
 
 	<div>
-		<button id="run-computation" onclick="deferWithSplitCompute()">Loop smoothed by Split compute</button>
+		<button onclick="deferWithSplitCompute()">Break loop with <code>setTimeout</code> (every 16ms - library version)</button>
 		<span id="iterations-split">Iterations</span>
 	</div>
 
+	<div>
+		<button onclick="deferWithisInputPending()">Interrupt loop on clicks with <code>isInputPending()</code></button>
+		<span id="iterations-input-pending">Iterations</span>
+	</div>
 
+isInputPending
 	<button id="run-animation" onclick="fromLeftToRight()">Animate jQuery</button>
 	<button id="stop-animation" onclick="stopAnimation()">STOP !</button>
 	<button id="run-animation-css" onclick="startCSSAnimation()">Animate with CSS</button>
