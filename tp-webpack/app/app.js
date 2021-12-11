@@ -7,9 +7,11 @@ const DatePicker = loadable(() =>
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const staticDatePicker = document.getElementById('application-date-picker')
+const staticDatePicker = document.getElementById('date-picker')
+const container = document.getElementById('application-date-picker')
 
 ReactDOM.render(
 	<DatePicker />,
-	staticDatePicker
+	container
 )
+
