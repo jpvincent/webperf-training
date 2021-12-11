@@ -10,8 +10,9 @@ import ReactDOM from 'react-dom'
 const staticDatePicker = document.getElementById('date-picker')
 const container = document.getElementById('application-date-picker')
 
-ReactDOM.render(
-	<DatePicker />,
-	container
-)
-
+staticDatePicker.addEventListener('focus', () => {
+	ReactDOM.render(
+		<DatePicker />,
+		container
+	)
+}, {once:true})
