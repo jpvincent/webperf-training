@@ -7,7 +7,7 @@
 		"*.css"
 	],
 	"scripts": {
-		"start": "nodemon serve-static.js",
+		"start": "npx serve . -p 8181 --cors --no-clipboard",
 		"build": "webpack --config tp-webpack/webpack.config.js",
 		"wizard": "npx bundle-wizard https://localhost:8181/tp-ecommerce/home.html --ignoreHTTPSErrors",
 		"move": "cp -rvf tp-webpack/build tp-ecommerce/assets/"
@@ -18,26 +18,16 @@
 		"@babel/runtime": "^7.12.5",
 		"babel-loader": "^8.1.0",
 		"clean-webpack-plugin": "^3.0.0",
-		"compression": "^1.7.4",
 		"css-loader": "^5.0.1",
-		"express": "^4.17.1",
-		"http2": "^3.3.7",
 		"moment": "^2.29.1",
-		"nodemon": "^1.19.4",
 		"react": "^17.0.1",
 		"react-autosuggest": "^10.0.3",
 		"react-dates": "^21.8.0",
 		"react-dom": "^17.0.1",
 		"react-visibility-sensor": "^5.1.1",
 		"react-with-direction": "^1.3.1",
-		"serve-favicon": "2.3.2",
-		"shrink-ray-current": "^4.1.2",
-		"spdy": "^4.0.2",
 		"style-loader": "^2.0.0",
 		"webpack-bundle-analyzer": "^3.9.0"
-	},
-	"nodemonConfig": {
-		"watch": "serve-static.js"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.1.0",
