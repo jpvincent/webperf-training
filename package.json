@@ -4,23 +4,12 @@
 	"description": "",
 	"main": "serve-static.js",
 	"scripts": {
-		"start": "nodemon serve-static.js",
+		"start": "npx serve . -p 8181 --cors --no-clipboard",
 		"compress": "npx @squoosh/cli --output-dir=test --suffix=_compressed --mozjpeg='{}' --avif='{}'  ./tp-ecommerce/assets/img/Hero-adjusted-2_1950x.jpg"
 	},
 	"author": "Jean-Pierre Vincent",
 	"license": "ISC",
 	"dependencies": {
-		"@squoosh/cli": "^0.7.2",
-		"compression": "^1.7.4",
-		"express": "^4.17.1",
-		"http2": "^3.3.7",
-		"node-zopfli-es": "^1.0.7",
-		"nodemon": "^1.19.4",
-		"serve-favicon": "2.3.2",
-		"shrink-ray-current": "^4.1.2",
-		"spdy": "^4.0.2"
-	},
-	"nodemonConfig": {
-		"watch": "serve-static.js"
+		"@squoosh/cli": "^0.7.2"
 	}
 }
