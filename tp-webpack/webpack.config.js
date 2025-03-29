@@ -12,9 +12,9 @@ module.exports = {
 	mode: 'production', // mode par défaut. Autre valeur : 'development'
 	devtool: 'source-map', // important pour s'aider au debug
 	resolve: {
-		// profiling React (https://gist.github.com/bvaughn/25e6233aeb1b4f0cdb8d8366e54a3977)
+		// profiling React (https://gist.github.com/bvaughn/25e6233aeb1b4f0cdb8d8366e54a3977#webpack-4)
 		alias: {
-			'react-dom': 'react-dom/profiling',
+			'react-dom$': 'react-dom/profiling',
 			'scheduler/tracing': 'scheduler/tracing-profiling',
 		},
 	},
@@ -23,6 +23,7 @@ module.exports = {
 		path: path.resolve(dirTpWebpack, 'build'),
 		publicPath: '/tp-webpack/build/',
 	},
+	optimization: { minimize: false },
 	module: {
 		rules: [
 			{
