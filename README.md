@@ -16,7 +16,7 @@ Publier sur un serveur de fichier statique ([Netlify](https://app.netlify.com/si
 
 # Pré-requis
 
-- utiliser Node 14 (`nvm use stable`)
+- utiliser Node 22 (`nvm use stable`)
 
 # Licence
 
